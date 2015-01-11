@@ -6,31 +6,91 @@
 .sidebar{
   width: 288px;
   min-height: 100%;
-  background: #26272a;
+  background: #232427;
+  position: fixed;
   .logotype{
     padding: 100px 55px;
   }
-  .navigation{
-   	li{
-   		border-top: 1px solid #1d1e21;
-   		a{
-   			display: block;
-	   		margin: 15px 0;
-	 			font: 16px/38px Roboto-Regular;
-	 			color: #ffffff;
-	 			text-align: center;
-	 			opacity: 0.7;
-   		}
-   		a:hover{
-   			color: #fbda59;
-   		}	
+  .navigation > ul > li{
+ 		border-top: 1px solid #1d1e21;
+	> a{
+			display: block;
+			height: 63px;
+ 			font: 16px Roboto-Regular;
+ 			color: #ffffff;
+ 			text-align: center;
+ 			line-height: 63px;
+ 			opacity: 0.7;
+ 			&:hover{
+				color: #fbda59;
+			}
    	}
+   	&:hover{
+ 				background: #26282a;
+ 		}		
   }
 }
 
 /*------------------Sidebar toggle-menu styles ----------------------*/
 .toggle-menu{
 	.hidden;
+	background: #26282a;
+	li{
+		border-top: none;
+		&:first-child{
+			padding-top: 3px;
+		}
+		&:last-child{
+			padding-bottom: 15px;
+		}
+		a{
+			display: block;
+			margin: 14px 0;
+	 		font: 14px/29px Roboto-Light;
+			color: #ffffff;
+ 			text-align: center;
+ 			opacity: 0.7;
+ 			&:hover{
+ 			color: #fbda59;
+			}
+		}	
+	}
 }
 
+/*------------------Content styles ----------------------*/
+.content{
+	padding-left: 288px;
+	.layout{
+		height: 184px;
+		border-bottom: 1px solid #ededed;
+		.filter{
+			display: block;
+			width: 175px;
+			height: 21px;
+			color: #444444;
+			font: 22px Roboto-CondensedLight;
+			background: url(../img/btn-sprite.png) no-repeat 152px -20px;
+			float: left;
+			margin: 82px 0 0 48px;
+		}
+		.search{
+			float: right;
+			.input{
+				width: 390px;
+				height: 38px;
+				border: 1px solid #c0c0c0;
+				margin: 72px 4px 0 0;
+			}
+			.submit{
+				width: 120px;
+				height: 40px;
+				background: #2495bc;
+				border: none;
+				color: #ffffff;
+				font: 14px Roboto-Regular;
+				margin: 72px 80px 0 0;
+			}
+		}
+	}
+}
 
