@@ -38,14 +38,14 @@
 	li{
 		border-top: none;
 		&:first-child{
-			padding-top: 3px;
+			padding-top: 1px;
 		}
 		&:last-child{
 			padding-bottom: 15px;
 		}
 		a{
 			display: block;
-			margin: 14px 0;
+			margin: 8px 0;
 	 		font: 14px/29px Roboto-Light;
 			color: #ffffff;
  			text-align: center;
@@ -57,7 +57,7 @@
 	}
 }
 
-/*------------------Content styles ----------------------*/
+/*------------------Content layout styles ----------------------*/
 .content{
 	padding-left: 288px;
 	.layout{
@@ -69,9 +69,9 @@
 			height: 21px;
 			color: #444444;
 			font: 22px Roboto-CondensedLight;
-			background: url(../img/btn-sprite.png) no-repeat 152px -20px;
+			background: url(../img/btn-sprite.png) no-repeat 152px -15px;
 			float: left;
-			margin: 82px 0 0 48px;
+			margin: 80px 0 0 48px;
 		}
 		.search{
 			float: right;
@@ -82,14 +82,35 @@
 				margin: 72px 4px 0 0;
 			}
 			.submit{
-				width: 120px;
-				height: 40px;
+				.read-btn;
 				background: #2495bc;
-				border: none;
 				color: #ffffff;
-				font: 14px Roboto-Regular;
 				margin: 72px 80px 0 0;
 			}
+		}
+	}
+}
+
+/*------------------Content article styles ----------------------*/
+.article{
+	width: 400px;
+	border: 1px solid #ededed;
+	float: left;
+	font: 16px Roboto-Regular;
+	color: #666666;
+	line-height: 1.5em;
+	.postheader{
+	width: 304px;
+	margin-left: 48px;
+	}
+	.postcontent{
+		width: 304px;
+		margin: 13px 0 0 48px;
+		a{
+			display: inline-block;
+			color: #ababab;
+			font: 14px Roboto-Regular;
+			margin-top: 25px;
 		}
 	}
 }

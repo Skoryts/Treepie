@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Treepie</title>
     <link rel="stylesheet" href="./css/common.css"/>
+    <script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
 </head>
 <body>
 <div class="sidebar">
@@ -12,18 +13,49 @@
   </div>
   <nav class="navigation">
     <ul>
-      <li><a href="">Інтер'єр</a></li>
-      <li><a href="">Дизайн</a></li>
       <li>
-        <a href="">Розробка</a>
+        <a href="#">Інтер'єр</a>
         <ul class="toggle-menu">
-          <li><a href="">веб дизайн</a></li>
-          <li><a href="">верстка</a></li>
-          <li><a href="">розробка</a></li>
-          <li><a href="">програмування</a></li>
+          <li><a href="">Веб дизайн</a></li>
+          <li><a href="">Верстка</a></li>
+          <li><a href="">Розробка</a></li>
+          <li><a href="">Програмування</a></li>
         </ul>
       </li>
-      <li><a href="">Handmade</a></li>
+      <li>
+        <a href="#">Дизайн</a>
+        <ul class="toggle-menu">
+          <li><a href="">Веб дизайн</a></li>
+          <li><a href="">Верстка</a></li>
+          <li><a href="">Розробка</a></li>
+          <li><a href="">Програмування</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Розробка</a>
+        <ul class="toggle-menu">
+          <li><a href="">Веб дизайн</a></li>
+          <li><a href="">Верстка</a></li>
+          <li><a href="">Розробка</a></li>
+          <li><a href="">Програмування</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Handmade</a>
+        <ul class="toggle-menu">
+          <li><a href="">Веб дизайн</a></li>
+          <li><a href="">Верстка</a></li>
+          <li><a href="">Розробка</a></li>
+          <li><a href="">Програмування</a></li>
+        </ul>
+      </li>
+      <script>
+        $(document).ready(function(){
+          $('.navigation a').click(function(){
+            $(this).siblings('.toggle-menu').slideToggle(100);
+          });
+        });
+      </script>
     </ul>
   </nav>
 </div>
@@ -35,6 +67,56 @@
       <input class="submit" type="submit" value="пошук">
     </form>
   </div>
+  <article class="article">
+    <img src="./img/article-img.png" alt="">
+    <header class="postheader">
+      <time>05/09/2014</time>
+      <h2><a href="">Різні версії Lorem Ipsum з'явились за минулі роки</a></h2>
+    </header>
+    <div class="postcontent">
+      <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування.</p>
+      <a href="">#webdesign</a>
+    </div>
+    <a href="" class="read-btn">читати</a>
+  </article>
+  <article class="article">
+    <header class="postheader">
+      <time>01/09/2014</time>
+      <h2><a href="">Lorem Ipsum є, фактично, стандартною "рибою"</a></h2>
+    </header>
+    <div class="postcontent">
+      <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію. Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку <br><br>
+      Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. Lorem Ipsum походить з розділів 1.10.32 та 1.10.33 цицеронівського "de Finibus Bonorum et Malorum" ("Про межі добра і зла"), написаного у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. <br><br>
+      Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.</p>
+    </div>
+    <a href="" class="read-btn">читати</a>
+  </article>
+  <article class="article">
+    <header class="postheader">
+      <time>01/09/2014</time>
+      <h2><a href="">Класичний текст, використовуваний з XVI ст</a></h2>
+    </header>
+    <div class="postcontent">
+      <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування. <br><br>
+      Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." <br><br>
+      Це робить текст схожим на оповідний. Багато програм верстування.</p>
+      <a href="">#webdesign</a>
+    </div>
+    <a href="" class="read-btn">читати</a>
+  </article>
+  <article class="article">
+    <header class="postheader">
+      <time>01/09/2014</time>
+      <h2><a href="">Lorem Ipsum є, фактично, стандартною "рибою"</a></h2>
+    </header>
+    <div class="postcontent">
+      <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію. Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку <br><br>
+      Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. Lorem Ipsum походить з розділів 1.10.32 та 1.10.33 цицеронівського "de Finibus Bonorum et Malorum" ("Про межі добра і зла"), написаного у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. <br><br>
+      Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.</p>
+      <a href="">#webdesign</a>
+    </div>
+    <a href="" class="read-btn">читати</a>
+  </article>
 </div>
 </body>
 </html>
