@@ -51,22 +51,71 @@
       </li>
       <script>
         $(document).ready(function(){
-          $('.navigation a').click(function(){
-            $(this).siblings('.toggle-menu').slideToggle(100);
+          $('.navigation a, .filter').click(function(){
+            $(this).siblings('.toggle-menu, .filter-menu').slideToggle(100);
           });
         });
       </script>
     </ul>
   </nav>
 </div>
-<div class="content">
-  <div class="layout">
-    <a href="" class="filter">Найпопулярніші</a>
+<div class="layout">
+    <a href="#" class="filter">Найпопулярніші
+    </a>
     <form class="search" action="" name="search">
       <input class="input" type="text">
       <input class="submit" type="submit" value="пошук">
     </form>
+    <div class="filter-menu">
+      <ul>
+        <li>Інтер’єр</li>
+        <li><a href="#">#балкон</a></li>
+        <li><a href="#">#кухня</a></li>
+        <li><a href="#">#спальня</a></li>
+        <li><a href="#">#дім</a></li>
+        <li><a href="#">#квартира</a></li>
+        <li><a href="#">#альтанка</a></li>
+      </ul>
+      <ul>
+        <li>Handmade</li>
+        <li><a href="#">#іграшки</a></li>
+        <li><a href="#">#біжутерія</a></li>
+        <li><a href="#">#одяг</a></li>
+        <li><a href="#">#відкритки</a></li>
+      </ul>
+      <ul>
+        <li>Розробка</li>
+        <li><a href="#">#css</a></li>
+        <li><a href="#">#php</a></li>
+        <li><a href="#">#design</a></li>
+        <li><a href="#">#seo</a></li>
+        <li><a href="#">#html</a></li>
+        <li><a href="#">#js</a></li>
+      </ul>
+      <ul>
+        <li>Mock up</li>
+        <li><a href="#">#bottle</a></li>
+        <li><a href="#">#screen</a></li>
+        <li><a href="#">#device</a></li>
+        <li><a href="#">#mock up</a></li>
+      </ul>
+      <div class="filter-search">
+        <div>
+          <a href="" class="search-btn"></a>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function(){
+          $(".filter-menu a").on("click", function() {
+            $(".filter-search div").prepend(this);
+          });
+        });
+      </script>
+    </div>
   </div>
+
+<div class="content">
+  
   <article class="article">
     <img src="./img/article-img.png" alt="">
     <header class="postheader">
