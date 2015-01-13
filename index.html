@@ -109,7 +109,11 @@
           $(".filter-menu a").on("click", function() {
             $(".filter-search div").prepend(this);
           });
+          $(".filter-search a").on("click", function() {
+            $(this).remove();
+          });
         });
+      
       </script>
     </div>
   </div>
