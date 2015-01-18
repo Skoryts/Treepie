@@ -10,15 +10,18 @@ $(document).ready(function(){
  	});
 });
 /*-----------------------Filter----------------------*/
-		var mas = "";
+		var mas = [];
+		var a = "";
+
 		$(document).ready(function(){
 		  $(".filter-tag").on("click", function() {
-						
-							if (mas != $(".filter-menu ul li")){
-								$(".filter-search div ul").prepend("<li>" + this.textContent + "</li>");
-								mas = $(".filter-search li");
-							}
-		
+  	 	a = $(this).text().slice(1);
+			mas = $(".filter-search li").text().split("#").slice(1);
+
+  		if (mas.indexOf(a) == -1){
+				$(".filter-search div ul").prepend("<li>" + this.textContent + "</li>");
+			}
+
 		 	$(".filter-search li").on("click", function() {
 		    $(this).remove();
 		  });
