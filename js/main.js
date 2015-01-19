@@ -28,5 +28,13 @@ $(document).ready(function(){
 		});
 	});
 
+/*-----------------------Article----------------------*/
 
+$( function() {
+  
+  $('.content').isotope({
+    layoutMode: 'fitColumns',
+    itemSelector: '.article'
+  });
+});
 
