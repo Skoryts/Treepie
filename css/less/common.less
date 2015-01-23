@@ -12,7 +12,7 @@
   .logotype{
     padding: 100px 55px;
   }
-  .navigation > ul > li{
+  .navigation ul > li{
  		border-top: 1px solid #1d1e21;
 		span{
 			display: block;
@@ -64,39 +64,40 @@
 	.header{
 		height: 184px;
 		border-bottom: 1px solid #ededed;
-	}
-	.filter{
-		width: 175px;
-		height: 21px;
-		color: #444444;
-		font: 22px Roboto-CondensedLight;
-		background: url(../img/btn-sprite.png) no-repeat 152px -15px;
-		float: left;
-		margin: 80px 0 0 48px;
-		cursor: pointer;
-		&:hover{
-			color: #2495bc;
-		}
-	}
-	.search{
-		float: right;
-		width: 601px;
-		margin-top: 72px;
-		input[type="text"]{
-			width: 370px;
-			height: 38px;
-			border: 1px solid #c0c0c0;
-			margin-right: 4px;
+		.filter{
+			width: 175px;
+			height: 21px;
+			color: #444444;
+			font: 22px Roboto-CondensedLight;
+			background: url(../img/btn-sprite.png) no-repeat 152px -20px;
 			float: left;
-			padding: 0 10px;
-			font: 16px Roboto-Regular;
-			color: #969292
+			margin: 80px 0 0 48px;
+			cursor: pointer;
+			&:hover{
+				color: #2495bc;
+			}
 		}
-		input[type="submit"]{
-			.button.blue;
-			
+		.search{
+			float: right;
+			width: 601px;
+			margin-top: 72px;
+			input[type="text"]{
+				width: 370px;
+				height: 38px;
+				border: 1px solid #c0c0c0;
+				margin-right: 4px;
+				float: left;
+				padding: 0 10px;
+				font: 16px Roboto-Regular;
+				color: #969292
+			}
+			input[type="submit"]{
+				.button.blue;
+				
+			}
 		}
 	}
+	
 	.filter-menu{
 		.hidden;
 		background: #ffffff;
@@ -124,7 +125,7 @@
 						display: inline-block;
 						&:hover{
 							color: #2495bc;
-							background: url(../img/btn-sprite.png) no-repeat right -110px;
+							background: url(../img/btn-sprite.png) no-repeat right -115px;
 						}
 					}
 				}
@@ -152,7 +153,7 @@
 						&:hover{
 							color: #2495bc;
 							cursor: pointer;
-							background: url(../img/btn-sprite.png) no-repeat right -121px;
+							background: url(../img/btn-sprite.png) no-repeat right -126px;
 						}
 					}
 				}
@@ -160,29 +161,35 @@
 					display: inline-block;
 					width: 19px;
 					height: 19px;
-					background: url(../img/btn-sprite.png) no-repeat -2px -51px;
+					background: url(../img/btn-sprite.png) no-repeat -2px -56px;
 					margin-top: 18px;
 				}
 			}	
 		}
 	}
 	.content{
-		height: 250%;
+		height: 100%;
 		.article{
-			width: 400px;
+			min-width: 400px;
+			width: 22%;
 			border-right: 1px solid #ededed;
 			border-bottom: 1px solid #ededed;
 			float: left;
 			font: 16px Roboto-Regular;
 			color: #666666;
 			line-height: 1.5em;
+			img {
+				width: 100%;
+			}
 			.article-header{
-			width: 304px;
-			margin-left: 48px;
+				width: 76%;
+				min-width: 304px;
+				margin: 0 auto;
 			}
 			.article-content{
-				width: 304px;
-				margin: 13px 0 0 48px;
+				min-width: 304px;
+				width: 76%;
+				margin: 13px auto 0 auto;
 				.article-tags{
 					margin-top: 22px;
 					li{
@@ -197,6 +204,11 @@
 						}
 					}
 				}
+			}
+			.article-footer{
+				min-width: 304px;
+				width: 76%;
+				margin: 0 auto;
 			}
 		}
 	}

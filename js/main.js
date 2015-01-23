@@ -30,11 +30,13 @@ $(document).ready(function(){
 
 /*-----------------------Article----------------------*/
 
-$( function() {
+/*$( function() {
   
   $('.content').isotope({
     layoutMode: 'fitColumns',
     itemSelector: '.article'
   });
 });
+*/
+
 
