@@ -32,32 +32,32 @@
    	}
    	&:hover{
  		background: #26282a;
- 	}
-	.toggle-menu{
-		.hidden;
-		background: #26282a;
-		li{
-			border: none;
-			&:first-child{
-				padding-top: 1px;
-			}
-			&:last-child{
-				padding-bottom: 15px;
-			}
+ 		}	
+  }
+  .toggle-menu{ 
+  		position: absolute;
+  		top: 375px;
+  		width: 288px;
+			.hidden;
+	  li{
 			a{
 				display: block;
-				margin: 8px 0;
-		 		font: 14px/29px Roboto-Light;
-				color: #ffffff;
+				height: 63px;
+	 			font: 16px Roboto-Regular;
+	 			color: #ffffff;
 	 			text-align: center;
+	 			line-height: 63px;
 	 			opacity: 0.7;
 	 			&:hover{
-	 			color: #fbda59;
+					color: #fbda59;
+					cursor: pointer;
 				}
-			}	
-		}
-	}		
-  }
+	   	}
+	   	&:hover{
+	 			background: #26282a;
+	 		}	
+		}	
+	}
 }
 
 /*------------------Content layout styles ----------------------*/
