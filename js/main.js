@@ -2,13 +2,14 @@
 
 /*-----------------------SideBar----------------------*/
 $(document).ready(function(){
+	var lol;
   $(".navigation span").click(function(){
+  	lol = $(this).next();
 
-  	$(".navigation span").toggle("slide", {direction: "left"}, 500);
-    $(".toggle-menu").toggle("slide", {direction: "right"}, 500);
-
-  	//$(".menu").css({ "border": "none"});
-
+  	if (lol.text() != ""){
+	    $(this).next().toggle("slide", {direction: "right"}, 500);
+	  	$(".navigation span").toggle("slide", {direction: "left"}, 500);
+		}
   });
  	$(".filter").click(function () {
  		$(".filter-menu").slideToggle(100);
@@ -24,9 +25,9 @@ var a = "";
 		if (mas.indexOf(a) == -1){
 			$(".filter-search div ul").prepend("<li>" + this.textContent + "</li>");
 		}
+		$(".filter-search li").on("click", function() {
+	    $(this).remove();
+		});
 	});
 	
-	$(".filter-search li").on("click", function() {
-    $(this).remove();
-	});
 });
