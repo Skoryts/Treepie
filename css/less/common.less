@@ -9,6 +9,7 @@
   background: #232427;
   position: fixed;
   z-index: 10;
+  overflow: hidden;
   .logotype{
     padding: 100px 55px;
   }
@@ -25,6 +26,7 @@
  			line-height: 63px;
  			opacity: 0.7;
  			border-top: 1px solid #1d1e21;
+ 			position: relative;
  			&:hover{
 				color: #fbda59;
 				cursor: pointer;
@@ -36,8 +38,9 @@
   }
   .toggle-menu{ 
   		position: absolute;
-  		top: 375px;
+  		top: 376px;
   		width: 288px;
+  		left: 288px;
 			.hidden;
 	  li{
 	  	&:last-child a{

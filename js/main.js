@@ -7,8 +7,8 @@ $(document).ready(function(){
   	lol = $(this).next();
 
   	if (lol.text() != ""){
-	    $(this).next().toggle("slide", {direction: "right"}, 500);
-	  	$(".navigation span").toggle("slide", {direction: "left"}, 500);
+	    $(this).next().show().animate({left: "-=288px"}, 500);
+	    $(".navigation span").animate({left: "-=288px"}, 500);
 		}
   });
  	$(".filter").click(function () {
