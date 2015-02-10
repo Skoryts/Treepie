@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./css/common.css"/>
     <script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
-   <!-- <script type="text/javascript" src="./js/jquery-ui.min.js"></script> -->
 </head>
 <body>
   <div class="sidebar">
@@ -14,7 +13,13 @@
       <a href="index.html"><img src="./img/logo.png" alt="treepie logo"/></a>
     </div>
     <nav class="navigation">
-      <ul>
+      <ul class="icon-menu">
+        <li><span id="menu"></span></li>
+        <li><span id="login"></span></li>
+        <li><span id="tags"></span></li>
+        <li><span id="search"></span></li>
+      </ul>
+      <ul class="menu">
         <li>
           <span>Інтер'єр</span>
           <ul class="toggle-menu">
@@ -41,6 +46,7 @@
         </li>
       </ul>
     </nav>
+    <span class="back-button"></span>
   </div>
   <div class="wrapper">
     <div class="content">

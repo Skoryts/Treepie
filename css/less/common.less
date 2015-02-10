@@ -4,38 +4,84 @@
 
 /*------------------Sidebar styles ----------------------*/
 .sidebar{
-  width: 288px;
+  width: 286px;
   min-height: 100%;
   background: #232427;
   position: fixed;
   z-index: 10;
   overflow: hidden;
+  border-left: 2px solid #2495bc;
   .logotype{
     padding: 100px 55px;
   }
-  .navigation ul > li{
- 		&:last-child span{
- 			border-bottom: 1px solid #1d1e21;
- 		}
-		span{
-			display: block;
-			height: 63px;
- 			font: 16px Roboto-Regular;
- 			color: rgba(255, 255, 255, 0.7);
- 			text-align: center;
- 			line-height: 63px;
- 			border-top: 1px solid #1d1e21;
- 			position: relative;
- 			&:hover{
-				color: rgba(251, 218, 89, 0.7);
-				cursor: pointer;
-				background: #26282a;
-			}
-   	}	
+  .navigation{
+  	margin-bottom: 167px;
+  	.icon-menu{
+  		margin: 0 0 23px 46px;
+  		li{
+  			height: 48px;
+  			width: 48px;
+  			display: inline-block;
+  			vertical-align: middle;
+  			#menu{
+  				height: 11px;
+  				width: 17px;
+  				background: url(../img/menu-sprite.png) no-repeat 0 0;
+					display: block;
+					margin: 19px auto 0 auto;
+  			}
+  			#login{
+  				height: 16px;
+  				width: 15px;
+  				background: url(../img/menu-sprite.png) no-repeat 0 -13px;
+					display: block;
+					margin: 14px auto 0 auto;
+  			}
+  			#tags{
+  				height: 16px;
+  				width: 16px;
+  				background: url(../img/menu-sprite.png) no-repeat 0 -31px;
+					display: block;
+					margin: 15px auto 0 auto;
+  			}
+  			#search{
+  				height: 16px;
+  				width: 16px;
+  				background: url(../img/menu-sprite.png) no-repeat 0 -49px;
+					display: block;
+					margin: 14px auto 0 auto;
+  			}
+  			&:hover{
+  				background: #2495bc;
+  				cursor: pointer;
+  			}
+  		}
+  	}
+  	.menu{
+  		li{
+  			&:last-child span{
+		 			border-bottom: 1px solid #1d1e21;
+		 		}
+				span{
+					display: block;
+					height: 63px;
+		 			font: 16px Roboto-Regular;
+		 			color: rgba(255, 255, 255, 0.7);
+		 			text-align: center;
+		 			line-height: 63px;
+		 			border-top: 1px solid #1d1e21;
+		 			position: relative;
+		 			&:hover{
+						cursor: pointer;
+						background: #2495bc;
+					}
+		   	}	
+  		}
+  	}		
   }
   .toggle-menu{ 
   		position: absolute;
-  		top: 376px;
+  		top: 447px;
   		width: 288px;
   		left: 288px;
 			.hidden;
@@ -52,9 +98,8 @@
 	 			line-height: 63px;
  				border-top: 1px solid #1d1e21;
 	 			&:hover{
-					color: rgba(251, 218, 89, 0.7);
 					cursor: pointer;
-					background: #26282a;
+					background: #2495bc;
 				}
 	   	}
 		}	
