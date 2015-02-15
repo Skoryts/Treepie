@@ -1,9 +1,9 @@
 
 $(document).ready(function(){
-	
+	var menuActive = "";
 /*----------------Style >= 1400px-----------------------------*/
-	if (screen.width >= 1400) {
-
+	if (window.innerWidth >= 1400) {
+		$(".menu").removeClass("hidden");
 		/*-----------------------SideBar----------------------*/
 	  $(".navigation span").click(function(){
 	  	var menu;
@@ -13,7 +13,6 @@ $(document).ready(function(){
 		    $(".navigation span").animate({left: "-=288px"}, 500);
 			}
 	  });	
-
 	  /*----------------icon-menu-----------------------------*/
 		var textId = "";
 		$(".icon-menu li").click(function(){
@@ -36,8 +35,7 @@ $(document).ready(function(){
 		});
 	}
 /*----------------Style <= 1399px-----------------------------*/
-	if (screen.width <= 1399) {
-
+	if (window.innerWidth <= 1399) {
 		/*-----------------------SideBar----------------------*/
 	  $(".navigation span").click(function(){
 	  	var menu;
@@ -47,31 +45,57 @@ $(document).ready(function(){
 		    $(".navigation span").animate({right: "+=288px"}, 500);
 			}
 	  });	
-	  
 	  /*----------------icon-menu-----------------------------*/
-		var textId = "";
 		$(".icon-menu li").click(function(){
+			var textId = "";
 			textId = $(this).children("span").attr("id");
 			$(this).siblings().removeClass("active");
 			$(this).addClass("active");
 			switch (textId) {
-				case "menu":
-					$(".icon-menu").siblings().addClass("hidden");
-					$(".menu").removeClass("hidden");
-					textId = "menuDown";
-				break;
+				case "menu":	
+					if (menuActive == "menu block"){
+						$(".icon-menu").siblings().addClass("hidden");
+						menuActive = ""
+						break;
+					} else {
+							$(".icon-menu").siblings().addClass("hidden");
+							$(".menu").removeClass("hidden");
+							menuActive = "menu " + $(".menu").css("display");
+							break;
+						}
 				case "login":
-					$(".icon-menu").siblings().addClass("hidden");
-					$(".login").removeClass("hidden");
-					break;
+					if (menuActive == "login block"){
+						$(".icon-menu").siblings().addClass("hidden");
+						menuActive = ""
+						break;
+					} else {
+						$(".icon-menu").siblings().addClass("hidden");
+						$(".login").removeClass("hidden");
+						menuActive = "login " + $(".login").css("display");
+						break;
+					}
 				case "tags":
-					$(".icon-menu").siblings().addClass("hidden");
-					$(".tags").removeClass("hidden");
-					break;
+					if (menuActive == "tags block"){
+						$(".icon-menu").siblings().addClass("hidden");
+						menuActive = ""
+						break;
+					} else {
+						$(".icon-menu").siblings().addClass("hidden");
+						$(".tags").removeClass("hidden");
+						menuActive = "tags " + $(".tags").css("display");
+						break;
+					}
 				case "search":
-					$(".icon-menu").siblings().addClass("hidden");
-					$(".search").removeClass("hidden");
-					break;
+					if (menuActive == "search block"){
+						$(".icon-menu").siblings().addClass("hidden");
+						menuActive = ""
+						break;
+					} else {
+						$(".icon-menu").siblings().addClass("hidden");
+						$(".search").removeClass("hidden");
+						menuActive = "search " + $(".search").css("display");
+						break;
+					}
 			} 	
 		});
 	}
