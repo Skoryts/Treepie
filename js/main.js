@@ -22,7 +22,7 @@ function stylesheetToggle() {
 		    $(this).next().show().animate({left: "-=288px"}, 500);
 		    $(".navigation span").animate({left: "-=288px"}, 500);
 			}
-	  });	
+	  });
 	  /*----------------icon-menu-----------------------------*/
 		var textId = "";
 		$(".icon-menu li").click(function(){
