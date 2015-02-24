@@ -145,21 +145,20 @@
 	/*------------------Content layout styles ----------------------*/
 	.wrapper{
 		height: 100%;
-		padding-left: 288px;	
+		padding: 74px 0 0 288px;	
 		.content{
 			width: 58%;
 			float: left;
-			padding: 74px 0 0 48px;
-			.article{
+			padding: 0 0 74px 48px;
+			article{
 				border-bottom: 1px solid #bababa;
-				font: 16px Roboto-Regular;
-				color: #666666;
-				line-height: 1.5em;
 				padding-bottom: 40px;
 				margin-bottom: 74px;
-				.article-header{
+				header{
+					margin-bottom: 40px;
 				}
 				.article-content{
+					margin-bottom: 29px;
 					img{
 						margin-bottom: 27px;
 						display: block;
@@ -174,7 +173,6 @@
 						padding-left: 25px;
 						line-height: 16px;
 						margin-left: 19px;
-
 					}
 					.like{
 						width: 16px;
@@ -188,12 +186,11 @@
 						margin-left: 15px;
 					}
 					p{
-						margin-bottom: 29px;
 						font: 14px Roboto-Regular;
 						color: #666666;
 					}
 				}
-				.article-footer{
+				footer{
 					.article-tags{
 						li{
 							display: inline;
@@ -212,7 +209,6 @@
 			.pagination{	
 				ul{
 					text-align: center;
-					margin-bottom: 74px;
 					li{
 						display: inline-block;
 						vertical-align: middle;
@@ -621,7 +617,7 @@
 		.news{
 			width: 33%;
 			float: right;
-			padding: 74px 0 20px 4%;
+			padding: 0 2% 20px 2%;
 			time{
 				margin-bottom: 14px;
 				font: 14px Roboto-Regular;
