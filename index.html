@@ -15,14 +15,14 @@
     </div>
     <nav class="navigation">
       <ul class="icon-menu">
-        <li><span id="menu"></span></li>
-        <li><span id="login"></span></li>
-        <li><span id="tags"></span></li>
-        <li><span id="search"></span></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
       <ul class="menu hidden">
         <li>
-          <span>Інтер'єр</span>
+          <div>Інтер'єр</div>
           <ul class="toggle-menu">
             <li><a href="">Веб дизайн</a></li>
             <li><a href="">Верстка</a></li>
@@ -31,7 +31,7 @@
           </ul>
         </li>
         <li>
-          <span>Дизайн</span>
+          <div>Дизайн</div>
           <ul class="toggle-menu">
             <li><a href="">Веб дизайн</a></li>
             <li><a href="">Верстка</a></li>
@@ -40,16 +40,18 @@
           </ul>
         </li>
         <li>
-          <span>Розробка</span>
+          <div>Розробка</div>
         </li>
         <li>
-          <span>Handmade</span>
+          <div>Handmade</div>
         </li>
       </ul>
       <div class="login hidden">
-        <input type="text" placeholder="Пошта">
-        <input type="password" placeholder="Пароль">
-        <input type="submit" value="Увійти">
+      	<form action="">
+      		<input type="text" placeholder="Пошта">
+	        <input type="password" placeholder="Пароль">
+	        <input type="submit" value="Увійти">
+      	</form>        
         <p>Введіть, будь ласка, пошту та пароль для входу або ж для реєстрації.</p>
       </div>
       <div class="tags hidden">
@@ -99,11 +101,13 @@
         </ul>
       </div>
       <div class="search hidden">
-        <input type="text" placeholder="Введіть слово">
-        <input type="submit" value="Пошук">
+      	<form action="">
+      		<input type="text" placeholder="Введіть слово">
+        	<input type="submit" value="Пошук">
+      	</form>        
       </div>
     </nav>
-    <a href="#" class="back-button"></a>
+    <div class="back-button"></div>
   </div>
   <div class="wrapper">
     <div class="content">
@@ -135,12 +139,12 @@
           <a href="" class="like">20</a>
           <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування.Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування.</p>
         </div>
-        <div class="article-footer">
+        <footer>
           <ul class="article-tags">
             <li><a href="">#webdesign</a></li>
             <li><a href="">#design</a></li>
           </ul>
-        </div>
+        </footer>
       </article>
       <article>
         <header class="article-header">
@@ -152,12 +156,12 @@
           <a href="" class="comment">3</a>
           <a href="" class="like">20</a>
         </div>
-        <div class="article-footer">
+        <footer>
           <ul class="article-tags">
             <li><a href="">#webdesign</a></li>
             <li><a href="">#design</a></li>
           </ul>
-        </div>
+        </footer>
       </article>
       <div class="pagination">
         <ul>
@@ -172,58 +176,66 @@
       </div>
     </div>
     <aside>
-      <h2><a href="">Найпопулярніші статті</a></h2>
-      <ul class="top-article">
-        <li>
-          <time>01/09/2014</time>
-          <h4><a href="">On websites that have a lot of pages, breadcrumb navigation can greatly enhance the way</a></h4>
-        </li>
-        <li>
-          <time>01/09/2014</time>
-          <h4><a href="">In terms of usability, breadcrumbs reduce the number of actions a website visitor</a></h4>
-        </li>
-        <li>
-          <time>01/09/2014</time>
-          <h4><a href="">They are also an effective visual aid that indicates the location</a></h4>
-        </li>
-        <li>
-          <time>01/09/2014</time>
-          <h4><a href="">Making it a great source of contextual information for landing pages.</a></h4>
-        </li>
-      </ul>
+    	<div class="top-article">
+    		<div class="title">Найпопулярніші статті</div>
+	      <article>
+	        <header>
+	          <time>01/09/2014</time>
+	          <h2><a href="">On websites that have a lot of pages, breadcrumb navigation can greatly enhance the way</a></h2>
+	        </header>
+	      </article>
+	      <article>
+	        <header>
+	          <time>01/09/2014</time>
+	          <h2><a href="">In terms of usability, breadcrumbs reduce the number of actions a website visitor</a></h2>
+	        </header>
+	      </article>
+	      <article>
+	        <header>
+	          <time>01/09/2014</time>
+	          <h2><a href="">They are also an effective visual aid that indicates the location</a></h2>
+	        </header>
+	      </article>
+	      <article>
+	        <header>
+	          <time>01/09/2014</time>
+	          <h2><a href="">Making it a great source of contextual information for landing pages.</a></h2>
+	        </header>
+	      </article>
+    	</div>
       <div class="advertising">
         <a href=""><img src="./img/advertising.png" alt=""></a>
         <a href=""><img src="./img/advertising.png" alt=""></a>
         <a href=""><img src="./img/advertising.png" alt=""></a>
         <a href=""><img src="./img/advertising.png" alt=""></a>
       </div>
-      <h2><a href="">Варто почитати</a></h2>
-      <ul class="worth-article">
-        <li>
-          <a href=""><img src="./img/mini-img.png" alt=""></a>
-          <div class="title">
-            <time>01/09/2014</time>
-            <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
-            <a href="" class="read-btn">читати</a>
-          </div> 
-        </li>
-        <li>
-          <a href=""><img src="./img/mini-img.png" alt=""></a>
-          <div class="title">
-            <time>01/09/2014</time>
-            <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
-            <a href="" class="read-btn">читати</a>
-          </div> 
-        </li>
-        <li>
-          <a href=""><img src="./img/mini-img.png" alt=""></a>
-          <div class="title">
-            <time>01/09/2014</time>
-            <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
-            <a href="" class="read-btn">читати</a>
-          </div> 
-        </li>
-      </ul>
+      <div class="worth-article">
+      	<div class="title">Варто почитати</div>
+				<article class="cf">
+					<img src="./img/mini-img.png" alt="">
+	        <header>
+	          <time>01/09/2014</time>
+	          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
+	          <a href="" class="read-btn">читати</a>
+	        </header>
+	      </article>
+	      <article class="cf">
+					<img src="./img/mini-img.png" alt="">
+	        <header>
+	          <time>01/09/2014</time>
+	          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
+	          <a href="" class="read-btn">читати</a>
+	        </header>
+	      </article>
+	      <article class="cf">
+					<img src="./img/mini-img.png" alt="">
+	        <header>
+	          <time>01/09/2014</time>
+	          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
+	          <a href="" class="read-btn">читати</a>
+	        </header>
+	      </article>
+      </div>
     </aside>
   </div>
 </body>
