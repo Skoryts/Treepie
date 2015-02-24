@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('fonts/roboto-regular.eot');
+  src: url('fonts/roboto-regular.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-regular.woff') format('woff'), url('fonts/roboto-regular.ttf') format('truetype'), url('fonts/roboto-regular.svg#Roboto-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/RobotoLight.eot');
+  src: url('fonts/RobotoLight.eot?#iefix') format('embedded-opentype'), url('fonts/RobotoLight.woff') format('woff'), url('fonts/RobotoLight.ttf') format('truetype'), url('fonts/RobotoLight.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('fonts/RobotoMedium.eot');
+  src: url('fonts/RobotoMedium.eot?#iefix') format('embedded-opentype'), url('fonts/RobotoMedium.woff') format('woff'), url('fonts/RobotoMedium.ttf') format('truetype'), url('fonts/RobotoMedium.svg#robotomedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-CondensedLight';
+  src: url('fonts/robotocondensedlight.eot');
+  src: url('fonts/robotocondensedlight.eot?#iefix') format('embedded-opentype'), url('fonts/robotocondensedlight.woff') format('woff'), url('fonts/robotocondensedlight.ttf') format('truetype'), url('fonts/robotocondensedlight.svg#Roboto-CondensedLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  background: #fff;
+}
+body,
+a {
+  font: 16px/23px Roboto-Regular;
+  text-decoration: none;
+}
+ul li {
+  list-style-type: none;
+}
+time {
+  display: block;
+  font: 14px Roboto-Regular;
+  color: #ababab;
+  margin-top: 34px;
+}
+h2 a {
+  display: inline-block;
+  font: 22px Roboto-Medium;
+  line-height: 1.5em;
+  color: #444444;
+  margin-top: 10px;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.content:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.ma {
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+}
+.button {
+  display: inline-block;
+  font: 14px Roboto-Regular;
+  width: 120px;
+  height: 40px;
+  background: #fbda59;
+  color: #61500d;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+  margin: 58px 0 55px 48px;
+}
+.button.blue {
+  background: #2495bc;
+  color: #ffffff;
+  float: left;
+  margin: 0;
+  cursor: pointer;
+  font: 14px Roboto-Regular;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+}
+.button.blue:hover {
+  background: #1A7594;
+}
+.button:hover {
+  background: #FFCB00;
+  color: #000000;
+}
+/*------------------Sidebar styles ----------------------*/
+.sidebar {
+  width: 288px;
+  min-height: 100%;
+  background: #232427;
+  position: fixed;
+  z-index: 10;
+}
+.sidebar .logotype {
+  padding: 100px 55px;
+}
+.sidebar .navigation > ul > li {
+  border-top: 1px solid #1d1e21;
+}
+.sidebar .navigation > ul > li span {
+  display: block;
+  height: 63px;
+  font: 16px Roboto-Regular;
+  color: #ffffff;
+  text-align: center;
+  line-height: 63px;
+  opacity: 0.7;
+}
+.sidebar .navigation > ul > li span:hover {
+  color: #fbda59;
+  cursor: pointer;
+}
+.sidebar .navigation > ul > li:hover {
+  background: #26282a;
+}
+.sidebar .navigation > ul > li .toggle-menu {
+  display: none;
+  background: #26282a;
+}
+.sidebar .navigation > ul > li .toggle-menu li {
+  border-top: none;
+}
+.sidebar .navigation > ul > li .toggle-menu li:first-child {
+  padding-top: 1px;
+}
+.sidebar .navigation > ul > li .toggle-menu li:last-child {
+  padding-bottom: 15px;
+}
+.sidebar .navigation > ul > li .toggle-menu li a {
+  display: block;
+  margin: 8px 0;
+  font: 14px/29px Roboto-Light;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.7;
+}
+.sidebar .navigation > ul > li .toggle-menu li a:hover {
+  color: #fbda59;
+}
+/*------------------Content layout styles ----------------------*/
+.wrapper {
+  height: 100%;
+  padding-left: 288px;
+}
+.wrapper .header {
+  height: 184px;
+  border-bottom: 1px solid #ededed;
+}
+.wrapper .filter {
+  width: 175px;
+  height: 21px;
+  color: #444444;
+  font: 22px Roboto-CondensedLight;
+  background: url(../img/btn-sprite.png) no-repeat 152px -15px;
+  float: left;
+  margin: 80px 0 0 48px;
+  cursor: pointer;
+}
+.wrapper .filter:hover {
+  color: #2495bc;
+}
+.wrapper .search {
+  float: right;
+  width: 601px;
+  margin-top: 72px;
+}
+.wrapper .search input[type="text"] {
+  width: 370px;
+  height: 38px;
+  border: 1px solid #c0c0c0;
+  margin-right: 4px;
+  float: left;
+  padding: 0 10px;
+  font: 16px Roboto-Regular;
+  color: #969292;
+}
+.wrapper .search input[type="submit"] {
+  background: #2495bc;
+  color: #ffffff;
+  float: left;
+  margin: 0;
+  cursor: pointer;
+  font: 14px Roboto-Regular;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+}
+.wrapper .search input[type="submit"]:hover {
+  background: #1A7594;
+}
+.wrapper .filter-menu {
+  display: none;
+  background: #ffffff;
+  position: absolute;
+  top: 143px;
+  width: 100%;
+  z-index: 3;
+  margin-left: -288px;
+}
+.wrapper .filter-menu .fix-block {
+  margin-left: 288px;
+}
+.wrapper .filter-menu .fix-block > ul {
+  float: left;
+  margin-left: 49px;
+  margin-bottom: 43px;
+}
+.wrapper .filter-menu .fix-block > ul li {
+  font: 18px Roboto-CondensedLight;
+  color: #444444;
+}
+.wrapper .filter-menu .fix-block > ul li span {
+  font: 14px/26px Roboto-Regular;
+  color: #ababab;
+  cursor: pointer;
+  line-height: 7px;
+  padding-right: 37px;
+  height: 7px;
+  display: inline-block;
+}
+.wrapper .filter-menu .fix-block > ul li span:hover {
+  color: #2495bc;
+  background: url(../img/btn-sprite.png) no-repeat right -110px;
+}
+.wrapper .filter-menu .filter-search {
+  clear: both;
+  min-height: 55px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+.wrapper .filter-menu .filter-search div {
+  margin-left: 49px;
+}
+.wrapper .filter-menu .filter-search div ul {
+  margin-top: 15px;
+  float: left;
+}
+.wrapper .filter-menu .filter-search div ul li {
+  display: inline-block;
+  font: 14px/26px Roboto-Regular;
+  color: #ababab;
+  cursor: pointer;
+  line-height: 8px;
+  padding-right: 37px;
+  height: 7px;
+}
+.wrapper .filter-menu .filter-search div ul li:hover {
+  color: #2495bc;
+  cursor: pointer;
+  background: url(../img/btn-sprite.png) no-repeat right -121px;
+}
+.wrapper .filter-menu .filter-search div .search-btn {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(../img/btn-sprite.png) no-repeat -2px -51px;
+  margin-top: 18px;
+}
+.wrapper .content {
+  height: 250%;
+}
+.wrapper .content .article {
+  width: 400px;
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  float: left;
+  font: 16px Roboto-Regular;
+  color: #666666;
+  line-height: 1.5em;
+}
+.wrapper .content .article .article-header {
+  width: 304px;
+  margin-left: 48px;
+}
+.wrapper .content .article .article-content {
+  width: 304px;
+  margin: 13px 0 0 48px;
+}
+.wrapper .content .article .article-content .article-tags {
+  margin-top: 22px;
+}
+.wrapper .content .article .article-content .article-tags li {
+  display: inline;
+}
+.wrapper .content .article .article-content .article-tags li a {
+  color: #ababab;
+  font: 14px Roboto-Regular;
+  margin: 25px 6px 0 0;
+}
+.wrapper .content .article .article-content .article-tags li a:hover {
+  color: #2495bc;
+}
