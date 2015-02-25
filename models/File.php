@@ -29,8 +29,6 @@ class File extends ActiveRecord
 	const NAME_LENGTH = 32;
 	const NAME_IMAGE_THUMBNAIL_SUFFIX = '_th';
 
-	public $uploadedFile;
-
 	public static $imageTypes = [
 		'image/jpeg',
 		'image/png',
@@ -50,12 +48,6 @@ class File extends ActiveRecord
 			[['type', 'path', 'originalName', 'extension'], 'string', 'max' => 255],
 			[['path'], 'string', 'min' => 1],
 			[['name'], 'string', 'max' => self::NAME_LENGTH],
-
-			[['uploadedFile'], 'safe'],
-			[['uploadedFile'], 'file',
-				'extensions' => 'jpg, png',
-				'mimeTypes' => implode(',', File::$imageTypes),
-			],
 		];
 	}
 
@@ -73,8 +65,6 @@ class File extends ActiveRecord
 			'extension' => Yii::t('app', 'Extension'),
 			'createdAt' => Yii::t('app', 'Created At'),
 			'updatedAt' => Yii::t('app', 'Updated At'),
-
-			'uploadedFile' => Yii::t('app', 'File'),
 		];
 	}
 
@@ -95,10 +85,6 @@ class File extends ActiveRecord
 		if (parent::beforeSave($insert)) {
 			if (empty($this->userId)) {
 				$this->userId = Yii::$app->user->id;
-			}
-
-			if (empty($this->name)) {
-				$this->name = self::createFileName();
 			}
 
 			return true;
@@ -168,13 +154,13 @@ class File extends ActiveRecord
 
 	private static function createDirectory()
 	{
-		if (!file_exists(Constant::DIR_FILES)) {
-			if (!mkdir(Constant::DIR_FILES)) {
+		$directoryPath = Constant::DIR_FILES;
+		if (!file_exists($directoryPath)) {
+			if (!mkdir($directoryPath)) {
 				return false;
 			}
 		}
 
-		$directoryPath = Constant::DIR_FILES;
 		$directoryName = (new \DateTime())->format('Y-m-d');
 		$directoryFullPath = $directoryPath . Constant::DIR_SEPARATOR . $directoryName;
 
