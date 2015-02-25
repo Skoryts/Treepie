@@ -168,6 +168,12 @@ class File extends ActiveRecord
 
 	private static function createDirectory()
 	{
+		if (!file_exists(Constant::DIR_FILES)) {
+			if (!mkdir(Constant::DIR_FILES)) {
+				return false;
+			}
+		}
+
 		$directoryPath = Constant::DIR_FILES;
 		$directoryName = (new \DateTime())->format('Y-m-d');
 		$directoryFullPath = $directoryPath . Constant::DIR_SEPARATOR . $directoryName;
