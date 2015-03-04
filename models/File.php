@@ -96,7 +96,7 @@ class File extends ActiveRecord
 	public function beforeDelete()
 	{
 		if (parent::beforeDelete()) {
-			if (!unlink($this->getAbsolutePath())) {
+			if (!unlink($this->absolutePath)) {
 				return false;
 			}
 

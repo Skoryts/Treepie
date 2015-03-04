@@ -13,35 +13,46 @@ use yii\db\ActiveRecord;
  */
 class RelationType extends ActiveRecord
 {
-    public static function tableName()
-    {
-        return '{{%relation_type}}';
-    }
+	public static function tableName()
+	{
+		return '{{%relation_type}}';
+	}
 
-    public function rules()
-    {
-        return [
-            [['id'], 'integer'],
-            [['name'], 'string', 'max' => 255]
-        ];
-    }
+	public function rules()
+	{
+		return [
+			[['id'], 'integer'],
+			[['name'], 'string', 'max' => 255]
+		];
+	}
 
-    public function attributeLabels()
-    {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
-        ];
-    }
+	public function attributeLabels()
+	{
+		return [
+			'id' => Yii::t('app', 'ID'),
+			'name' => Yii::t('app', 'Name'),
+		];
+	}
 
-    public static function getRelationIdByName($name)
-    {
-        $model = self::find()->where(['name' => $name])->one();
+	public static function getRelationIdByName($name)
+	{
+		$model = self::find()->where(['name' => $name])->one();
 
-        if (!empty($model)) {
-            return $model->id;
-        }
+		if (!empty($model)) {
+			return $model->id;
+		}
 
-        return null;
-    }
+		return null;
+	}
+
+	public static function getRelationNameById($id)
+	{
+		$model = self::find()->where(['id' => $id])->one();
+
+		if (!empty($model)) {
+			return $model->name;
+		}
+
+		return null;
+	}
 }

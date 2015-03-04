@@ -22,36 +22,52 @@
   display: none;
 }
 
-//Button "read" class
-.button{
-	display: inline-block;
+.active{
+	background: #2495bc;
+}
+
+.title{
+	font: 28px Roboto-Regular;
+	color: #444;
+	margin-bottom: 36px;
+}
+
+.read-btn{
+	height: 38px;
+	width: 118px;
+	border: 1px solid #c0c0c0;
 	font: 14px Roboto-Regular;
-	width: 120px;
-	height: 40px;
-	background: #fbda59;
-	color: #61500d;
+	color: #ababab;
+	display: inline-block;
 	text-align: center;
-	line-height: 40px;
-	border: none;
-	margin: 58px 0 55px 48px;
-	&.blue{
-		background: #2495bc;
-		color: #ffffff;
-		float: left;
-		margin: 0;
-		cursor: pointer;
-		font: 14px Roboto-Regular;
-		width: 120px;
-		height: 40px;
-		text-align: center;
-		line-height: 40px;
-		border: none;
-		&:hover{
-			background: #1A7594;	
-		}
-	}
+	line-height: 38px;
 	&:hover{
-		background: #FFCB00;
-		color: #000000;
+		background: #2495bc;
+		border: 1px solid #2495bc;
+		color: #fff;
+	}
+}
+
+.pag-active{
+	width: 40px;
+	height: 40px;
+	background: #2495bc;
+	color: #fff;
+	font: 14px Roboto-Regular;
+	border: none;
+}
+
+.back-button{
+	height: 46px;
+	width: 46px;
+	background: url(../img/btn-sprite.png) no-repeat 12px 17px;
+	border: 1px solid #c0c0c0;
+	display: block;
+	position: absolute;;
+	top: 872px;
+	left: 118px;
+	&:hover{
+		cursor: pointer;
+		background: url(../img/btn-sprite.png) #3A3A3A no-repeat 12px 17px;
 	}
 }

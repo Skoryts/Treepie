@@ -19,6 +19,7 @@ use yii\db\ActiveRecord;
  * @property string $body
  * @property string $published
  * @property string $draft
+ * @property string $tags
  * @property string $createdAt
  * @property string $updatedAt
  */
@@ -49,6 +50,7 @@ class Article extends ActiveRecord
 			[['body'], 'string'],
 			[['title', 'slug'], 'string', 'max' => 255],
 			[['createdAt', 'updatedAt'], 'safe'],
+			[['tags'], 'string'],
 
 			[['uploadedFile'], 'safe'],
 			[['uploadedFile'], 'file',
@@ -68,8 +70,9 @@ class Article extends ActiveRecord
 			'title',
 			'body',
 			'slug',
-			'uploadedFile',
 			'published',
+			'tags',
+			'uploadedFile',
 		];
 
 		return $scenarios;
@@ -84,6 +87,9 @@ class Article extends ActiveRecord
 			'title' => Yii::t('app', 'Title'),
 			'slug' => Yii::t('app', 'Slug'),
 			'body' => Yii::t('app', 'Body'),
+			'tags' => Yii::t('app', 'Tags'),
+			'draft' => Yii::t('app', 'Draft'),
+			'Published' => Yii::t('app', 'Published'),
 			'createdAt' => Yii::t('app', 'Created At'),
 			'updatedAt' => Yii::t('app', 'Updated At'),
 
@@ -105,7 +111,7 @@ class Article extends ActiveRecord
 
 	public function getFiles()
 	{
-		$this->hasMany(File::className(), ['relationId' => 'id'])
+		return $this->hasMany(File::className(), ['relationId' => 'id'])
 			->where([
 				'relationTypeId' => RelationType::getRelationIdByName(self::className()),
 			]);
@@ -113,7 +119,7 @@ class Article extends ActiveRecord
 
 	public function getLikeNumber()
 	{
-		$this->hasOne(File::className(), ['relationId' => 'id'])
+		return $this->hasOne(File::className(), ['relationId' => 'id'])
 			->where([
 				'relationTypeId' => RelationType::getRelationIdByName(self::className()),
 			]);
@@ -134,9 +140,18 @@ class Article extends ActiveRecord
 				$this->uploadedFile = UploadedFile::getInstances($this, 'uploadedFile');
 				foreach ($this->uploadedFile as $uploadedFile) {
 					if (!File::createFile($uploadedFile, $this)) {
-						//todo: think about this piece of code [@tooleks]
+						//todo: drunk code, you better think twice [@tooleks]
 						return false;
 					}
+				}
+			}
+
+			if (!empty($this->tags)) {
+				$tags = explode(',', $this->tags);
+				foreach ($tags as $value) {
+					$tag = new Tag();
+					$tag->value = $value;
+					$tag->save();
 				}
 			}
 
@@ -183,5 +198,35 @@ class Article extends ActiveRecord
 		return self::find()
 			->where(['slug' => $slug])
 			->one();
+	}
+
+	public function getTagsList()
+	{
+		$tagsList = [];
+		if (!empty($this->tags)) {
+			$tagsList = explode(',', $this->tags);
+		}
+
+		return $tagsList;
+	}
+
+	public static function getTopArticles()
+	{
+		//todo: add top articles business logic [@tooleks]
+		$models = self::find()
+			->limit(4)
+			->all();
+
+		return $models;
+	}
+
+	public static function getWorthArticles()
+	{
+		//todo: add worth articles business logic [@tooleks]
+		$models = self::find()
+			->limit(4)
+			->all();
+
+		return $models;
 	}
 }

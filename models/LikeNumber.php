@@ -15,30 +15,30 @@ use yii\db\ActiveRecord;
  */
 class LikeNumber extends ActiveRecord
 {
-    public static function tableName()
-    {
-        return '{{%like_number}}';
-    }
+	public static function tableName()
+	{
+		return '{{%like_number}}';
+	}
 
-    public function rules()
-    {
-        return [
-            [['relationTypeId', 'relationId', 'number'], 'integer']
-        ];
-    }
+	public function rules()
+	{
+		return [
+			[['relationTypeId', 'relationId', 'number'], 'integer']
+		];
+	}
 
-    public function attributeLabels()
-    {
-        return [
-            'id' => Yii::t('app', 'ID'),
-            'relationTypeId' => Yii::t('app', 'Relation Type ID'),
-            'relationId' => Yii::t('app', 'Relation ID'),
-            'number' => Yii::t('app', 'Number'),
-        ];
-    }
+	public function attributeLabels()
+	{
+		return [
+			'id' => Yii::t('app', 'ID'),
+			'relationTypeId' => Yii::t('app', 'Relation Type ID'),
+			'relationId' => Yii::t('app', 'Relation ID'),
+			'number' => Yii::t('app', 'Number'),
+		];
+	}
 
-    public function setNumber($value)
-    {
-        return $this->number = (int)$value;
-    }
+	public function setNumber($value)
+	{
+		return $this->number = (int)$value;
+	}
 }

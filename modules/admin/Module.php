@@ -6,15 +6,15 @@ use Yii;
 
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'app\modules\admin\controllers';
+	public $controllerNamespace = 'app\modules\admin\controllers';
 
-    public $defaultRoute = 'category';
+	public $defaultRoute = 'category';
 
-    public $layout = 'main';
+	public $layout = 'main';
 
-    public function init()
-    {
-        parent::init();
+	public function init()
+	{
+		parent::init();
 
-    }
+	}
 }

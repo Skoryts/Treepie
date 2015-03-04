@@ -1,6 +1,6 @@
 <?php
+
 use yii\helpers\Html;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use yii\helpers\Url;
 
@@ -20,113 +20,20 @@ AppAsset::register($this);
 	</head>
 	<body id="<?= $this->getBodyId() ?>">
 	<?php $this->beginBody() ?>
-	<?php //todo: create partial view for sidebar and menu [@tooleks] ?>
 	<div class="sidebar">
 		<div class="logotype">
-			<a href="<?= Url::to(['/']) ?>"><img src="../img/logo.png" alt="treepie logo"/></a>
+			<a href="<?= Url::to(['/']) ?>" class="logo"><img src="../img/logo.png" alt="treepie logo"/></a>
+			<a href="<?= Url::to(['/']) ?>" class="slim-logo"><img src="../img/slim-logo.png" alt="treepie logo"></a>
 		</div>
-		<nav class="navigation">
-			<ul>
-				<li>
-					<span>Інтер'єр</span>
-					<ul class="toggle-menu">
-						<li><a href="">Веб дизайн</a></li>
-						<li><a href="">Верстка</a></li>
-						<li><a href="">Розробка</a></li>
-						<li><a href="">Програмування</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>Дизайн</span>
-					<ul class="toggle-menu">
-						<li><a href="">Веб дизайн</a></li>
-						<li><a href="">Верстка</a></li>
-						<li><a href="">Розробка</a></li>
-						<li><a href="">Програмування</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>Розробка</span>
-					<ul class="toggle-menu">
-						<li><a href="">Веб дизайн</a></li>
-						<li><a href="">Верстка</a></li>
-						<li><a href="">Розробка</a></li>
-						<li><a href="">Програмування</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>Handmade</span>
-					<ul class="toggle-menu">
-						<li><a href="">Веб дизайн</a></li>
-						<li><a href="">Верстка</a></li>
-						<li><a href="">Розробка</a></li>
-						<li><a href="">Програмування</a></li>
-					</ul>
-				</li>
-				<script>
-
-				</script>
-			</ul>
-		</nav>
+		<?= $this->render('/common/_navigation') ?>
+		<div class="back-button"></div>
 	</div>
 	<div class="wrapper">
-		<?php //todo: create partial view for header [@tooleks] ?>
-		<div class="header">
-			<span class="filter">Найпопулярніші</span>
-
-			<form class="search" action="" name="search">
-				<input type="text">
-				<input type="submit" value="пошук">
-			</form>
-		</div>
-		<div class="filter-menu">
-			<div class="fix-block">
-				<ul>
-					<li>Інтер’єр</li>
-					<li><span class="filter-tag">#балкон</span></li>
-					<li><span class="filter-tag">#кухня</span></li>
-					<li><span class="filter-tag">#спальня</span></li>
-					<li><span class="filter-tag">#дім</span></li>
-					<li><span class="filter-tag">#квартира</span></li>
-					<li><span class="filter-tag">#альтанка</span></li>
-				</ul>
-				<ul>
-					<li>Handmade</li>
-					<li><span class="filter-tag">#іграшки</span></li>
-					<li><span class="filter-tag">#біжутерія</span></li>
-					<li><span class="filter-tag">#одяг</span></li>
-					<li><span class="filter-tag">#відкритки</span></li>
-				</ul>
-				<ul>
-					<li>Розробка</li>
-					<li><span class="filter-tag">#css</span></li>
-					<li><span class="filter-tag">#php</span></li>
-					<li><span class="filter-tag">#design</span></li>
-					<li><span class="filter-tag">#seo</span></li>
-					<li><span class="filter-tag">#html</span></li>
-					<li><span class="filter-tag">#js</span></li>
-				</ul>
-				<ul>
-					<li>Mock up</li>
-					<li><span class="filter-tag">#bottle</span></li>
-					<li><span class="filter-tag">#screen</span></li>
-					<li><span class="filter-tag">#device</span></li>
-					<li><span class="filter-tag">#mock up</span></li>
-				</ul>
-				<?php //todo: create form model and partial view for search form [@tooleks] ?>
-				<div class="filter-search">
-					<div>
-						<ul>
-						</ul>
-						<a href="" class="search-btn"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="content cf">
+		<div class="content">
 			<?php //todo: create template for the breadcrumbs navigation [@tooleks] ?>
 			<?= $content ?>
 		</div>
+		<?= $this->render('/common/_aside') ?>
 	</div>
 	<?php $this->endBody() ?>
 	</body>

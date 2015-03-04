@@ -30,7 +30,28 @@ class ArticleController extends Controller
 
 	//todo: add search by tag action [@tooleks]\
 
-	//todo: add search by query action [@tooleks]
+	public function actionTag($tag)
+	{
+		$searchModel = new ArticleSearch();
+		$dataProvider = $searchModel->searchByTag($tag);
+
+		return $this->render('index', [
+			'searchModel' => $searchModel,
+			'dataProvider' => $dataProvider,
+			'tag' => $tag,
+		]);
+	}
+
+	public function actionSearch($query)
+	{
+		$searchModel = new ArticleSearch();
+		$dataProvider = $searchModel->searchByQuery($query);
+
+		return $this->renderPartial('_index', [
+			'searchModel' => $searchModel,
+			'dataProvider' => $dataProvider,
+		]);
+	}
 
 	public function actionIndex($slug = null)
 	{
@@ -52,7 +73,7 @@ class ArticleController extends Controller
 
 	public function actionView($slug)
 	{
-		return $this->render('view', [
+		return $this->render('_view', [
 			'model' => $this->findModelBySlug(Article::className(), $slug),
 		]);
 	}

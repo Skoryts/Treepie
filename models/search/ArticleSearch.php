@@ -60,13 +60,53 @@ class ArticleSearch extends Article
 		return $dataProvider;
 	}
 
+	public function searchByQuery($searchQuery)
+	{
+		$query = Article::find();
+
+		$query->orFilterWhere(['like', 'title', $searchQuery])
+			->orFilterWhere(['like', 'slug', $searchQuery])
+			->orFilterWhere(['like', 'body', $searchQuery]);
+
+		$dataProvider = new ActiveDataProvider([
+			'query' => $query,
+			'sort' => ['defaultOrder' => ['createdAt' => SORT_DESC]],
+		]);
+
+		$query->andFilterWhere([
+			'published' => Article::OPTION_PUBLISHED,
+			'draft' => Article::OPTION_NOT_DRAFT,
+		]);
+
+		return $dataProvider;
+	}
+
+	public function searchByTag($tag)
+	{
+		$query = Article::find();
+
+		$query->andFilterWhere(['like', 'tags', $tag]);
+
+		$dataProvider = new ActiveDataProvider([
+			'query' => $query,
+			'sort' => ['defaultOrder' => ['createdAt' => SORT_DESC]],
+		]);
+
+		$query->andFilterWhere([
+			'published' => Article::OPTION_PUBLISHED,
+			'draft' => Article::OPTION_NOT_DRAFT,
+		]);
+
+		return $dataProvider;
+	}
+
 	public function searchByCategory(Category $category = null)
 	{
 		$query = Article::find();
 
 		$dataProvider = new ActiveDataProvider([
 			'query' => $query,
-			'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+			'sort' => ['defaultOrder' => ['createdAt' => SORT_DESC]],
 		]);
 
 		if (!empty($category)) {
