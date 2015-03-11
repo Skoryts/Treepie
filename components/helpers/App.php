@@ -9,7 +9,7 @@ class App
 {
 	public static $titlePathSeparator = ' › ';
 
-	public static function getTitle(array $items = [])
+	public static function getTitle($items = [])
 	{
 		$title[] = Yii::$app->name;
 

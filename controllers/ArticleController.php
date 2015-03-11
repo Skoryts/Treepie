@@ -3,10 +3,11 @@
 namespace app\controllers;
 
 use app\models\Category;
+use app\models\Comment;
 use Yii;
 use app\models\Article;
 use app\models\search\ArticleSearch;
-use yii\web\Controller;
+use app\components\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -15,21 +16,6 @@ use yii\filters\VerbFilter;
  */
 class ArticleController extends Controller
 {
-	public function behaviors()
-	{
-		//todo: add rbac access rules [@tooleks]
-		return [
-			'verbs' => [
-				'class' => VerbFilter::className(),
-				'actions' => [
-					'delete' => ['post'],
-				],
-			],
-		];
-	}
-
-	//todo: add search by tag action [@tooleks]\
-
 	public function actionTag($tag)
 	{
 		$searchModel = new ArticleSearch();
@@ -73,8 +59,15 @@ class ArticleController extends Controller
 
 	public function actionView($slug)
 	{
-		return $this->render('_view', [
-			'model' => $this->findModelBySlug(Article::className(), $slug),
+		$article = $this->findModelBySlug(Article::className(), $slug);
+		$comment = new Comment();
+		$comment->articleId = $article->id;
+		$comments = Comment::findByArticleId($article->id);
+
+		return $this->render('view', [
+			'article' => $article,
+			'comment' => $comment,
+			'comments' => $comments,
 		]);
 	}
 

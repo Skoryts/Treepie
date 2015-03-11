@@ -109,6 +109,11 @@ class Article extends ActiveRecord
 		];
 	}
 
+	public function getCategory()
+	{
+		return $this->hasOne(Category::className(), ['id' => 'categoryId']);
+	}
+
 	public function getFiles()
 	{
 		return $this->hasMany(File::className(), ['relationId' => 'id'])

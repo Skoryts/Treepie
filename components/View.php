@@ -2,6 +2,7 @@
 
 namespace app\components;
 
+use app\components\helpers\App;
 use Yii;
 use yii\web\View as CoreView;
 
@@ -37,5 +38,10 @@ class View extends CoreView
 				$this->setBreadcrumbsItem($item);
 			}
 		}
+	}
+
+	public function setTitle($items = [])
+	{
+		return $this->title = App::getTitle($items);
 	}
 }

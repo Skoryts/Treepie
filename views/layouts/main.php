@@ -29,8 +29,8 @@ AppAsset::register($this);
 		<div class="back-button"></div>
 	</div>
 	<div class="wrapper">
-		<div class="content">
-			<?php //todo: create template for the breadcrumbs navigation [@tooleks] ?>
+		<?php //todo: remove this fucking condition hardcode (frontend) [@tooleks] ?>
+		<div class="<?= (Yii::$app->controller->id == 'article' && Yii::$app->controller->action->id == 'view') ? 'content-textpage' : 'content' ?>">
 			<?= $content ?>
 		</div>
 		<?= $this->render('/common/_aside') ?>

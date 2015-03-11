@@ -40,4 +40,20 @@ class Category
 
 		return $list;
 	}
+
+	public static function getTitle(ModelCategory $category)
+	{
+		$list = [];
+
+		$setParentCategory = function (ModelCategory $category) use (&$list, &$setParentCategory) {
+			$list[] = $category->name;
+			if (!empty($category->parentCategory)) {
+				$setParentCategory($category->parentCategory);
+			}
+		};
+
+		$setParentCategory($category);
+
+		return $list;
+	}
 }

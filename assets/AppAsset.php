@@ -12,14 +12,15 @@ class AppAsset extends AssetBundle
 		'css/common.css',
 	];
 	public $js = [
-		'js/jquery-2.1.3.min.js',
 		'js/main.js',
 		'js/isotope.min.js',
 		'js/fitColumns.js',
 		'js/search.js',
 		'js/tag.js',
+		'js/comments.js',
 	];
 	public $depends = [
+		'yii\web\YiiAsset',
 	];
 
 	public function init()

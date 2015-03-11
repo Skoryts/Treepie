@@ -7,10 +7,8 @@ use app\models\SigninForm;
 use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
-use yii\helpers\Html;
-use yii\web\Controller;
+use app\components\Controller;
 use yii\filters\VerbFilter;
-use app\models\ContactForm;
 
 class SiteController extends Controller
 {
@@ -90,5 +88,10 @@ class SiteController extends Controller
 		Yii::$app->user->logout();
 
 		return $this->goHome();
+	}
+
+	public function actionGoBack()
+	{
+		return $this->goBack();
 	}
 }
