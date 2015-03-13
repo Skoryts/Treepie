@@ -122,6 +122,11 @@ class Article extends ActiveRecord
 			]);
 	}
 
+	public function getComments()
+	{
+		return $this->hasMany(Comment::className(), ['articleId' => 'id']);
+	}
+
 	public function getLikeNumber()
 	{
 		return $this->hasOne(File::className(), ['relationId' => 'id'])
