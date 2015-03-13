@@ -29,6 +29,8 @@ class File extends ActiveRecord
 	const NAME_LENGTH = 32;
 	const NAME_IMAGE_THUMBNAIL_SUFFIX = '_th';
 
+	public $uploadedFile;
+
 	public static $imageTypes = [
 		'image/jpeg',
 		'image/png',
