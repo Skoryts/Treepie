@@ -44,15 +44,16 @@ class Category extends ActiveRecord
 	function validateParentCategory($attribute, $param)
 	{
 		if ($this->parentCategoryId == $this->id) {
-			$this->addError($attribute, Yii::t('app', 'Parent category can not be same category.'));
+			$this->addError($attribute, Yii::t('app', 'Current category can not be assigned to itself.'));
 		}
 
-		$parentCategory = self::find()
-			->where(['id' => $this->parentCategoryId])
-			->one();
-
-		if (!empty($parentCategory->parentCategory) && $parentCategory->parentCategory->id == $this->id) {
-			$this->addError($attribute, Yii::t('app', 'Parent category parent is current category.'));
+		$childCategories = $this->getChildCategories();
+		if (!empty($childCategories)) {
+			foreach ($childCategories as $childCategory) {
+				if ($this->parentCategoryId == $childCategory->id) {
+					$this->addError($attribute, Yii::t('app', 'Current category already assigned as parent to the selected.'));
+				}
+			}
 		}
 	}
 
