@@ -5,11 +5,9 @@ use yii\grid\GridView;
 use yii\helpers\ArrayHelper;
 use app\models\Category;
 use app\models\User;
-use app\components\helpers\App;
 
 $this->pageTitle = Yii::t('app', 'Categories');
-$this->title = App::getTitle([$this->pageTitle, Yii::t('app', 'Control Panel')]);
-
+$this->setTitle([$this->pageTitle, Yii::t('app', 'Control Panel')]);
 $this->setBreadcrumbsItem(['label' => Yii::t('app', 'Control Panel'), 'url' => ['/admin']]);
 $this->setBreadcrumbsItem($this->pageTitle);
 
