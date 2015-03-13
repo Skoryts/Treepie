@@ -7,9 +7,6 @@ use Yii;
 use app\components\Controller;
 use yii\filters\VerbFilter;
 
-/**
- * CommentController implements the CRUD actions for Article model.
- */
 class CommentController extends Controller
 {
 	public function behaviors()

@@ -9,11 +9,7 @@ use app\models\Article;
 use app\models\search\ArticleSearch;
 use app\components\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
-/**
- * ArticleController implements the CRUD actions for Article model.
- */
 class ArticleController extends Controller
 {
 	public function actionTag($tag)
@@ -62,12 +58,10 @@ class ArticleController extends Controller
 		$article = $this->findModelBySlug(Article::className(), $slug);
 		$comment = new Comment();
 		$comment->articleId = $article->id;
-		$comments = Comment::findByArticleId($article->id);
 
 		return $this->render('view', [
 			'article' => $article,
 			'comment' => $comment,
-			'comments' => $comments,
 		]);
 	}
 
