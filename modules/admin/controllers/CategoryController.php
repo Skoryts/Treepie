@@ -37,19 +37,12 @@ class CategoryController extends Controller
 		]);
 	}
 
-	public function actionView($id)
-	{
-		return $this->render('view', [
-			'model' => $this->findModel($id),
-		]);
-	}
-
 	public function actionCreate()
 	{
 		$model = new Category();
 
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			return $this->redirect(['view', 'id' => $model->id]);
+			return $this->redirect(['index']);
 		} else {
 			return $this->render('create', [
 				'model' => $model,
@@ -62,7 +55,7 @@ class CategoryController extends Controller
 		$model = $this->findModel($id);
 
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			return $this->redirect(['view', 'id' => $model->id]);
+			return $this->redirect(['index']);
 		} else {
 			return $this->render('update', [
 				'model' => $model,
