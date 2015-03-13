@@ -60,7 +60,8 @@ $this->setBreadcrumbsItem($this->pageTitle);
 
 			[
 				'class' => 'yii\grid\ActionColumn',
-				'contentOptions' => ['style' => 'min-width: 70px;'],
+				'template' => '{update} {delete}',
+				'contentOptions' => ['style' => 'min-width: 70px; text-align: center;'],
 			],
 		],
 	]); ?>
