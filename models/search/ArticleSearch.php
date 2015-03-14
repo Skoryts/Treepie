@@ -47,7 +47,6 @@ class ArticleSearch extends Article
 			'id' => $this->id,
 			'userId' => $this->userId,
 			'categoryId' => $this->categoryId,
-			'draft' => $this->draft,
 			'published' => $this->published,
 		]);
 
@@ -56,6 +55,10 @@ class ArticleSearch extends Article
 			->andFilterWhere(['like', 'body', $this->slug])
 			->andFilterWhere(['like', 'createdAt', $this->createdAt])
 			->andFilterWhere(['like', 'updatedAt', $this->updatedAt]);
+
+		$query->andFilterWhere([
+			'draft' => Article::OPTION_NOT_DRAFT,
+		]);
 
 		return $dataProvider;
 	}

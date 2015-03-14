@@ -56,21 +56,6 @@ $this->setBreadcrumbsItem($this->pageTitle);
 			'title',
 			[
 				'format' => 'raw',
-				'attribute' => 'draft',
-				'filter' => [Article::OPTION_NOT_DRAFT => Yii::t('app', 'No'), Article::OPTION_DRAFT => Yii::t('app', 'Yes')],
-				'value' => function ($data) {
-					if ($data->draft == Article::OPTION_DRAFT) {
-						return Html::tag('span', '<span class="glyphicon glyphicon-ok"></span>', ['class' => 'label label-default']);
-					} elseif ($data->draft == Article::OPTION_NOT_DRAFT) {
-						return Html::tag('span', '<span class="glyphicon glyphicon-remove"></span>', ['class' => 'label label-success']);
-					}
-
-					return null;
-				},
-				'contentOptions' => ['style' => 'text-align: center;'],
-			],
-			[
-				'format' => 'raw',
 				'attribute' => 'published',
 				'filter' => [Article::OPTION_NOT_PUBLISHED => Yii::t('app', 'No'), Article::OPTION_PUBLISHED => Yii::t('app', 'Yes')],
 				'value' => function ($data) {
