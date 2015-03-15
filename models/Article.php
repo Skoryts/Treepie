@@ -26,7 +26,7 @@ use yii\db\ActiveRecord;
 class Article extends ActiveRecord
 {
 	const SCENARIO_UPDATE = 'update';
-	const SCENARIO_FILE_UPLOAD = 'file_upload';
+	const SCENARIO_UPLOAD_FILE = 'file_upload';
 
 	const OPTION_PUBLISHED = 1;
 	const OPTION_NOT_PUBLISHED = 0;
@@ -64,7 +64,7 @@ class Article extends ActiveRecord
 	public function scenarios()
 	{
 		$scenarios = parent::scenarios();
-		$scenarios[self::SCENARIO_FILE_UPLOAD] = ['uploadedFile'];
+		$scenarios[self::SCENARIO_UPLOAD_FILE] = ['uploadedFile'];
 		$scenarios[self::SCENARIO_UPDATE] = [
 			'categoryId',
 			'title',

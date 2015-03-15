@@ -55,21 +55,34 @@ class ArticleController extends Controller
 		return $this->redirect(['update', 'id' => $model->id]);
 	}
 
+	public function actionUploadFile($id)
+	{
+		$model = $this->findModel($id);
+		$model->setScenario(Article::SCENARIO_UPLOAD_FILE);
+
+		if ($model->load(Yii::$app->request->post())) {
+			$model->save();
+		}
+	}
+
 	public function actionUpdate($id)
 	{
 		$model = $this->findModel($id);
 		$model->setScenario(Article::SCENARIO_UPDATE);
 
 		$fileSearchModel = new FileSearch();
-		$fileDataProvider = $fileSearchModel->search(array_merge(
-			Yii::$app->request->queryParams,
-			[
-				'FileSearch' => [
-					'relationTypeId' => RelationType::getRelationIdByName($model::className()),
-					'relationId' => $model->id,
-				],
-			]
-		));
+		$fileDataProvider = $fileSearchModel->search(
+			array_merge(
+				Yii::$app->request->queryParams,
+				[
+					'FileSearch' => [
+						'relationTypeId' => RelationType::getRelationIdByName($model::className()),
+						'relationId' => $model->id,
+					],
+				]
+			),
+			5
+		);
 
 		if ($model->load(Yii::$app->request->post()) && $model->save()) {
 			Yii::$app->getSession()->addFlash(Constant::FLASH_MESSAGE_TYPE_SUCCESS, 'Article was successfully saved.');

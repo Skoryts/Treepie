@@ -25,13 +25,16 @@ class FileSearch extends File
 		return Model::scenarios();
 	}
 
-	public function search($params)
+	public function search($params, $pageSize = 20)
 	{
 		$query = File::find();
 
 		$dataProvider = new ActiveDataProvider([
 			'query' => $query,
-			'sort' => ['defaultOrder' => ['id' => SORT_DESC]]
+			'sort' => ['defaultOrder' => ['id' => SORT_DESC]],
+			'pagination' => [
+				'pageSize' => $pageSize,
+			],
 		]);
 
 		$this->load($params);
