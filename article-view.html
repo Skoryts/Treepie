@@ -7,7 +7,7 @@
 	    	<script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
 	    	<script type="text/javascript" src="./js/main.js"></script>
     </head>
-    <body>
+    <body id="article-view">
         <div class="sidebar">
 			    <div class="logotype">
 			      <a href="index.html" class="logo"><img src="./img/logo.png" alt="treepie logo"/></a>
@@ -15,14 +15,14 @@
 			    </div>
 			    <nav class="navigation">
 			      <ul class="icon-menu">
-			        <li><span id="menu"></span></li>
-			        <li><span id="login"></span></li>
-			        <li><span id="tags"></span></li>
-			        <li><span id="search"></span></li>
+			        <li></li>
+			        <li></li>
+			        <li></li>
+			        <li></li>
 			      </ul>
 			      <ul class="menu hidden">
 			        <li>
-			          <span>Інтер'єр</span>
+			          <div>Інтер'єр</div>
 			          <ul class="toggle-menu">
 			            <li><a href="">Веб дизайн</a></li>
 			            <li><a href="">Верстка</a></li>
@@ -31,7 +31,7 @@
 			          </ul>
 			        </li>
 			        <li>
-			          <span>Дизайн</span>
+			          <div>Дизайн</div>
 			          <ul class="toggle-menu">
 			            <li><a href="">Веб дизайн</a></li>
 			            <li><a href="">Верстка</a></li>
@@ -40,16 +40,18 @@
 			          </ul>
 			        </li>
 			        <li>
-			          <span>Розробка</span>
+			          <div>Розробка</div>
 			        </li>
 			        <li>
-			          <span>Handmade</span>
+			          <div>Handmade</div>
 			        </li>
 			      </ul>
 			      <div class="login hidden">
-			        <input type="text" placeholder="Пошта">
-			        <input type="password" placeholder="Пароль">
-			        <input type="submit" value="Увійти">
+			      	<form action="">
+			      		<input type="text" placeholder="Пошта">
+				        <input type="password" placeholder="Пароль">
+				        <input type="submit" value="Увійти">
+			      	</form>        
 			        <p>Введіть, будь ласка, пошту та пароль для входу або ж для реєстрації.</p>
 			      </div>
 			      <div class="tags hidden">
@@ -99,23 +101,25 @@
 			        </ul>
 			      </div>
 			      <div class="search hidden">
-			        <input type="text" placeholder="Введіть слово">
-			        <input type="submit" value="Пошук">
+			      	<form action="">
+			      		<input type="text" placeholder="Введіть слово">
+			        	<input type="submit" value="Пошук">
+			      	</form>        
 			      </div>
 			    </nav>
-			    <a href="#" class="back-button"></a>
+			    <div class="back-button"></div>
 			  </div>
 			  <div class="wrapper">
-			    <div class="content-textpage">
+			    <div class="content">
+			    	<div class="path">
+		      		<a href="" class="back-button"></a>
+		      		<div class="bread-crambs">
+		      			<a href="">Home</a> / 
+		      			<a href="">Handmade</a> / 
+		      			<span>Toy</span>
+		      		</div>
+		      	</div>
 			      <article class="article">
-			      	<div class="article-path">
-			      		<a href="#" class="back-button"></a>
-			      		<div class="path">
-			      			<a href="">Home</a> / 
-			      			<a href="">Handmade</a> / 
-			      			<span>Toy</span>
-			      		</div>
-			      	</div>
 			        <header class="article-header">
 			        	<time>01/09/2014</time>
 			          <h1>Існує багато варіацій уривків з Lorem Ipsum, але більшість з них зазнала певних змін</h1>
@@ -126,32 +130,30 @@
 								На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію. Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. <br><br>
 								Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з Lorem Ipsum.</p>
 								<div class="article-images">
-									<ul>
-										<li>
-											<img src="./img/img1.png" alt="">
-											<span>1</span>
-										</li>
-										<li>
-											<img src="./img/img2.png" alt="">
-											<span>2</span>
-										</li>
-										<li>
-											<img src="./img/img3.png" alt="">
-											<span>3</span>
-										</li>
-										<li>
-											<img src="./img/img1.png" alt="">											
-											<span>4</span>
-										</li>
-										<li>
-											<img src="./img/img2.png" alt="">											
-											<span>5</span>
-										</li>
-										<li>
-											<img src="./img/img3.png" alt="">											
+									<div>
+										<img src="./img/img1.png" alt="">
+										<span>1</span>
+									</div>
+									<div>
+										<img src="./img/img2.png" alt="">
+										<span>2</span>
+									</div>
+									<div>
+										<img src="./img/img3.png" alt="">
+										<span>3</span>
+									</div>
+									<div>
+										<img src="./img/img1.png" alt="">
+										<span>4</span>
+									</div>
+									<div>
+										<img src="./img/img2.png" alt="">
+										<span>5</span>
+									</div>
+									<div>
+										<img src="./img/img3.png" alt="">
 											<span>6</span>
-										</li>
-									</ul>
+									</div>
 								</div>
 								<p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію. Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. Lorem Ipsum походить з розділів 1.10.32 та 1.10.33 цицеронівського "de Finibus Bonorum et Malorum" ("Про межі добра і зла"), написаного у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.<br><br>
 								Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.<br><br>
@@ -163,7 +165,7 @@
 			        </div>
 			        <div class="article-footer">
 			          <div class="social-webs">
-									<span>Поділитися з друзями</span>
+									<div>Поділитися з друзями</div>
 									<a href="" class="facebook"></a>
 									<a href="" class="vk"></a>
 									<a href="" class="twitter"></a>
@@ -172,92 +174,84 @@
 			        </div>
 			      </article>
 			      <div class="comments">
-				    	<h2>Коментарі</h2>
-				    	<ul>
-				    		<li>
-				    			<h4>Стас Корицький</h4>
+				    	<div class="title">Коментарі</div>
+				    	<div class="comment">
+				    		<a href="" class="name">Стас Корицький</a>
 						    	<time>01/09/2014</time>
 						    	<p>Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. Lorem Ipsum походить з розділів 1.10.32 та 1.10.33 цицеронівського "de Finibus Bonorum et Malorum" ("Про межі добра і зла"), написаного у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.</p>
-				    		</li>
-				    		<li class="post-comment">
-					    		<div>
-					    			<h4>Саша</h4>
-							    	<time>01/09/2014</time>
-							    	<p>Про межі добра і зла"), написаного у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.</p>
-					    		</div>
-				    		</li>
-				    		<li>
-				    			<h4>Стас Корицький</h4>
+				    	</div>
+				    	<div class="comment reply">
+			    			<div>
+			    				<a href="" class="name">Саша</a>
+						    	<time>01/09/2014</time>
+						    	<p>Про межі добра і зла"), написаного у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.</p>
+						    </div>
+			    		</div>
+			    		<div class="comment">
+				    		<a href="" class="name">Стас Корицький</a>
 						    	<time>01/09/2014</time>
 						    	<p>Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. Lorem Ipsum походить з розділів 1.10.32 та 1.10.33 цицеронівського "de Finibus Bonorum et Malorum" ("Про межі добра і зла"), написаного у 45 році до н.е. Цей трактат з теорії етики був дуже популярним в епоху Відродження. Перший рядок Lorem Ipsum, "Lorem ipsum dolor sit amet..." походить з одного з рядків розділу 1.10.32.</p>
-				    		</li>
-				    	</ul>
-				    	<input type="text" placeholder="Прізвище, ім’я">
-				    	<input type="text" placeholder="Пошта">
-				    	<textarea name="textarea" placeholder="Коментар" maxlength="500"></textarea>
+				    	</div>				    	
+				    	<form action="">
+				    		<textarea name="textarea" placeholder="Коментар" maxlength="500"></textarea>
+				    	</form>
 				    	<input type="submit" class="blue" value="OK">
-				    	<h2><a href="">Варто почитати</a></h2>
+				    </div>
+				    <div class="worth">
+				    	<div class="title"><a href="">Варто почитати</a></div>
 				      <ul class="worth-article cf">
 				        <li>
 				          <a href=""><img src="./img/mini-img.png" alt=""></a>
-				          <div class="title">
-				            <time>01/09/2014</time>
-				            <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
-				            <a href="" class="read-btn">читати</a>
-				          </div> 
+			            <time>01/09/2014</time>
+			            <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
+			            <a href="" class="read-btn">читати</a>
 				        </li>
 				        <li>
 				          <a href=""><img src="./img/mini-img.png" alt=""></a>
-				          <div class="title">
-				            <time>01/09/2014</time>
-				            <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
-				            <a href="" class="read-btn">читати</a>
-				          </div> 
+			            <time>01/09/2014</time>
+			            <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
+			            <a href="" class="read-btn">читати</a>
 				        </li>
 				        <li>
 				          <a href=""><img src="./img/mini-img.png" alt=""></a>
-				          <div class="title">
-				            <time>01/09/2014</time>
-				            <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
-				            <a href="" class="read-btn">читати</a>
-				          </div> 
+			            <time>01/09/2014</time>
+			            <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
+			            <a href="" class="read-btn">читати</a>
 				        </li>
 				        <li>
 				          <a href=""><img src="./img/mini-img.png" alt=""></a>
-				          <div class="title">
-				            <time>01/09/2014</time>
-				            <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
-				            <a href="" class="read-btn">читати</a>
-				          </div> 
+			            <time>01/09/2014</time>
+			            <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
+			            <a href="" class="read-btn">читати</a>
 				        </li>
 				      </ul>
-				      <a href="#" class="back-button"></a>
 				    </div>
+				    <a href="" class="back-button"></a>
 			    </div>
-			    <div class="news-textpage">
+			    <aside>
 			      <ul class="top-article">
 			        <li>
 			          <time>01/09/2014</time>
-			          <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
+			          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
 			          <a href="" class="read-btn">читати</a>
 			        </li>
 			        <li>
 			          <time>01/09/2014</time>
-			          <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
+			          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
 			          <a href="" class="read-btn">читати</a>
 			        </li>
 			        <li>
 			          <time>01/09/2014</time>
-			          <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h4>
+			          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
 			          <a href="" class="read-btn">читати</a>
 			        </li>
 			        <li>
 			          <time>01/09/2014</time>
-			          <h4><a href="">Lorem Ipsum є, фактично, стандартною "рибою"</a></h4>
+			          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою"</a></h3>
 			          <a href="" class="read-btn">читати</a>
 			        </li>
 			      </ul>
-			    </div>
+			    </aside>
 			  </div>
     </body>
 </html>
