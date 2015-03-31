@@ -1,11 +1,10 @@
 
 
 $(document).ready(function(){
+	var masMenu = $(".icon-menu").siblings();
 	/*----------------icon-menu-----------------------------*/		
 	  $(".icon-menu li").click(function(){
-	  	var listIndex = $(this).index();
-	  	var masMenu = $(".icon-menu").siblings();
-
+			var listIndex = $(this).index();
 	  	/*----------close-open----------------*/	
 	  	if (masMenu[listIndex].classList.contains("hidden") == false){
 	  		masMenu.addClass("hidden");
@@ -23,7 +22,10 @@ $(document).ready(function(){
 	  	masMenu[listIndex].classList.remove("hidden");
 	  	$(".icon-menu li").removeClass("active");
 	  	$(this).addClass("active");
-	  	
+	  });
+	  $(".login div").click(function(){
+	  	masMenu.addClass("hidden");
+	  	$(".registration").removeClass("hidden");
 	  });
 
 
