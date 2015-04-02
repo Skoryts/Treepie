@@ -41,6 +41,16 @@ http://localhost/basic/web/
 CONFIGURATION
 -------------
 
+### Dependency Manager
+
+Download composer.phar (https://getcomposer.org/download/) and place it into the project root folder.
+
+Then run in project root folder:
+
+~~~
+php composer.phar update
+~~~
+
 ### Database
 
 Edit the file `config/db.php` with real data, for example:
@@ -57,7 +67,7 @@ return [
 
 **NOTE:** Yii won't create the database for you, this has to be done manually before you can access it.
 
-Run in project root folder:
+Then run in project root folder:
 
 ~~~
 php yii migrate --migrationPath=@yii/rbac/migrations
