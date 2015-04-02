@@ -68,6 +68,7 @@ class m150402_181505_basic_tables_structure extends Migration
 		$this->createTable(
 			't_file', [
 				'id' => 'pk',
+				'userId' => Schema::TYPE_INTEGER,
 				'relationTypeId' => Schema::TYPE_INTEGER,
 				'relationId' => Schema::TYPE_INTEGER,
 				'path' => Schema::TYPE_STRING . '(255)',
