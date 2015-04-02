@@ -87,3 +87,16 @@ return [
 **NOTE:** Yii won't create the database for you, this has to be done manually before you can access it.
 
 Also check and edit the other files in the `config/` directory to customize your application.
+
+### Before start
+
+Run in project root folder:
+
+php php yii migrate --migrationPath=@yii/rbac/migrations
+php yii migrate
+php yii rbac/init
+
+### admin user credentials
+email: admin@admin.admin
+username: admin
+password: admin
