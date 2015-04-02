@@ -88,6 +88,13 @@ class m150402_181505_basic_tables_structure extends Migration
 			]
 		);
 		$this->insert('t_relation_type', ['name' => 'app\models\Article']);
+
+		$this->createTable(
+			't_tag', [
+				'id' => 'pk',
+				'value' => Schema::TYPE_STRING . '(255)',
+			]
+		);
 	}
 
 	public function down()
@@ -98,5 +105,6 @@ class m150402_181505_basic_tables_structure extends Migration
 		$this->dropTable('t_category');
 		$this->dropTable('t_file');
 		$this->dropTable('t_relation_type');
+		$this->dropTable('t_tag');
 	}
 }
