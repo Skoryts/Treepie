@@ -13,8 +13,6 @@ use yii\db\ActiveRecord;
  * @property integer $userId
  * @property string $firstName
  * @property string $lastName
- * @property string $createdAt
- * @property string $updatedAt
  */
 class Profile extends ActiveRecord
 {
@@ -29,7 +27,6 @@ class Profile extends ActiveRecord
 			[['userId'], 'required'],
 			[['userId'], 'integer'],
 			[['firstName', 'lastName'], 'string', 'max' => 100],
-			[['createdAt', 'updatedAt'], 'safe'],
 		];
 	}
 
@@ -39,20 +36,6 @@ class Profile extends ActiveRecord
 			'userId' => Yii::t('app', 'User ID'),
 			'firstName' => Yii::t('app', 'First Name'),
 			'lastName' => Yii::t('app', 'Last Name'),
-			'createdAt' => Yii::t('app', 'Created At'),
-			'updatedAt' => Yii::t('app', 'Updated At'),
-		];
-	}
-
-	public function behaviors()
-	{
-		return [
-			[
-				'class' => TimestampBehavior::className(),
-				'createdAtAttribute' => 'createdAt',
-				'updatedAtAttribute' => 'updatedAt',
-				'value' => new Expression('NOW()'),
-			],
 		];
 	}
 }
