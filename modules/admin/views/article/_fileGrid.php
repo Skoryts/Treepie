@@ -8,6 +8,7 @@
 	<?= \yii\grid\GridView::widget([
 		'id' => 'article-files-grid',
 		'dataProvider' => $fileDataProvider,
+		'layout' => '{pager}' . PHP_EOL . '{summary}' . PHP_EOL . '{items}' . PHP_EOL . '{pager}',
 		'columns' => [
 			['class' => 'yii\grid\SerialColumn'],
 

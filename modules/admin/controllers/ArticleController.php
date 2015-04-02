@@ -14,6 +14,8 @@ use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Response;
+use yii\web\UploadedFile;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -57,12 +59,16 @@ class ArticleController extends Controller
 
 	public function actionUploadFile($id)
 	{
+		Yii::$app->response->format = Response::FORMAT_JSON;
+
 		$model = $this->findModel($id);
 		$model->setScenario(Article::SCENARIO_UPLOAD_FILE);
 
-		if ($model->load(Yii::$app->request->post())) {
-			$model->save();
+		if ($model->load(Yii::$app->request->post()) && $model->save()) {
+			return Json::encode(['errors' => null]);
 		}
+
+		return Json::encode(['errors' => $model->getErrors()]);
 	}
 
 	public function actionUpdate($id)
