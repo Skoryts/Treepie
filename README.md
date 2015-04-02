@@ -1,13 +1,5 @@
-Yii 2 Basic Application Template
+Treepie Information portal
 ================================
-
-Yii 2 Basic Application Template is a skeleton Yii 2 application best for
-rapidly creating small projects.
-
-The template contains the basic features including user login/logout and a contact page.
-It includes all commonly used configurations that would allow you to focus on adding new
-features to your application.
-
 
 DIRECTORY STRUCTURE
 -------------------
