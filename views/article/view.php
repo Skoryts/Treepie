@@ -1,6 +1,5 @@
 <?php
 
-use yii\helpers\Html;
 use app\components\helpers\Category;
 
 $this->pageTitle = $article->title;
@@ -31,4 +30,3 @@ $this->setBreadcrumbsItem($this->pageTitle);
 		<span class="add-to-bookmark"><?= Yii::t('app', 'Add to bookmarks') ?></span>
 	</div>
 </article>
-<?= $this->render('/comment/_comments', ['article' => $article, 'comment' => $comment, 'comments' => $comments]) ?>

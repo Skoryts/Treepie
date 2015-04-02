@@ -56,12 +56,9 @@ class ArticleController extends Controller
 	public function actionView($slug)
 	{
 		$article = $this->findModelBySlug(Article::className(), $slug);
-		$comment = new Comment();
-		$comment->articleId = $article->id;
 
 		return $this->render('view', [
 			'article' => $article,
-			'comment' => $comment,
 		]);
 	}
 
