@@ -92,11 +92,18 @@ Also check and edit the other files in the `config/` directory to customize your
 
 Run in project root folder:
 
-php php yii migrate --migrationPath=@yii/rbac/migrations
-php yii migrate
-php yii rbac/init
+~~~
+php yii migrate --migrationPath=@yii/rbac/migrations
 
-### admin user credentials
+php yii migrate
+
+php yii rbac/init
+~~~
+
+Administrator user credentials:
+
 email: admin@admin.admin
+
 username: admin
+
 password: admin
