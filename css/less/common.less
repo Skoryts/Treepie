@@ -1,6 +1,7 @@
 @import "fonts.less";
 @import "basic.less";
 @import "mixins.less";
+@import "article.less";
 
 
 .sidebar{
@@ -134,16 +135,24 @@
           line-height: 16px;
           margin-left: 19px;
         }
-        .like{
-          width: 16px;
-          height: 14px;
+        .likes{
           display: inline-block;
-          background: url(../img/like-arrows.svg) no-repeat 0 -13px;
-          font: 14px Roboto-Light;
-          color: #ababab;
-          padding-left: 23px;
-          line-height: 16px;
           margin-left: 15px;
+          a{
+            width: 9px;
+            height: 13px;
+            display: inline-block;
+            position: relative;
+            background: url(../img/like-arrows.svg) no-repeat 0 -13px;
+            &.unlike{
+              background-position: 0 0;
+            }
+          }
+          span{
+            font: 14px Roboto-Light;
+            color: #ababab;
+            padding: 0 5px;
+          }
         }
         p{
           font: 14px Roboto-Regular;
@@ -368,6 +377,23 @@
         }
       }
       .article-footer{
+        .likes{
+          a{
+            width: 9px;
+            height: 13px;
+            display: inline-block;
+            position: relative;
+            background: url(../img/like-arrows.svg) no-repeat 0 -13px;
+            &.unlike{
+              background-position: 0 0;
+            }
+          }
+          span{
+            font: 14px Roboto-Light;
+            color: #ababab;
+            padding: 0 5px;
+          }
+        }
         .social-webs{
           display: inline-block;
           vertical-align: top;
