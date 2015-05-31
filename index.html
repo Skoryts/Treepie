@@ -1,269 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Treepie</title>
-    <link rel="stylesheet" href="./css/common.css"/>
-    <script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+  <meta charset="UTF-8">
+  <title>Treepie</title>
+  <link rel="stylesheet" href="./css/common.css"/>
+  <script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
 </head>
-<body id="main-view">
-  <div class="sidebar">
-    <div class="logotype">
-      <a href="index.html" class="logo"><img src="./img/logo.png" alt="treepie logo"/></a>
-      <a href="index.html" class="slim-logo"><img src="./img/slim-logo.png" alt="treepie logo"></a>
+<body id="main">
+  <div class="layout">
+    <div class="panel">
+      <a class="logo" href="/">
+        <img src="./img/logo.png" alt="Treepie">
+      </a>
+
+      <nav>
+        <div title="Меню"></div>
+        <div title="Логін"></div>
+        <div title="Теги"></div>
+        <div title="Пошук"></div>
+      </nav>
     </div>
-    <nav class="navigation">
-      <ul class="icon-menu">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <ul class="menu hidden">
-        <li>
-          <div>Інтер'єр</div>
-          <ul class="toggle-menu">
-            <li><a href="">Веб дизайн</a></li>
-            <li><a href="">Верстка</a></li>
-            <li><a href="">Розробка</a></li>
-            <li><a href="">Програмування</a></li>
-          </ul>
-        </li>
-        <li>
-          <div>Дизайн</div>
-          <ul class="toggle-menu">
-            <li><a href="">Веб дизайн</a></li>
-            <li><a href="">Верстка</a></li>
-            <li><a href="">Розробка</a></li>
-            <li><a href="">Програмування</a></li>
-          </ul>
-        </li>
-        <li>
-          <div>Розробка</div>
-        </li>
-        <li>
-          <div>Handmade</div>
-        </li>
-      </ul>
-      <div class="login hidden">
-        <form action="">
-          <input type="text" placeholder="Пошта">
-          <input type="password" placeholder="Пароль">
-          <input type="submit" value="Увійти">
-        </form>                
-        <div>Зареєструватися</div>
-        <p>Введіть, будь ласка, пошту та пароль для входу.</p>
-      </div>
-      <div class="tags hidden">
-        <ul>
-          <li><a href="">#балкон</a></li>
-          <li><a href="">#кухня</a></li>
-          <li><a href="">#спальня</a></li>
-          <li><a href="">#дім</a></li>
-          <li><a href="">#квартира</a></li>
-          <li><a href="">#альтанка</a></li>
-          <li><a href="">#design</a></li>
-          <li><a href="">#seao</a></li>
-          <li><a href="">#html</a></li>
-          <li><a href="">#js</a></li>
-          <li><a href="">#bottle</a></li>
-          <li><a href="">#screen</a></li>
-          <li><a href="">#device</a></li>
-          <li><a href="">#mock up</a></li>
-          <li><a href="">#балкон</a></li>
-          <li><a href="">#кухня</a></li>
-          <li><a href="">#спальня</a></li>
-          <li><a href="">#дім</a></li>
-          <li><a href="">#квартира</a></li>
-          <li><a href="">#альтанка</a></li>
-          <li><a href="">#design</a></li>
-          <li><a href="">#seao</a></li>
-          <li><a href="">#html</a></li>
-          <li><a href="">#js</a></li>
-          <li><a href="">#bottle</a></li>
-          <li><a href="">#screen</a></li>
-          <li><a href="">#device</a></li>
-          <li><a href="">#mock up</a></li>
-          <li><a href="">#балкон</a></li>
-          <li><a href="">#кухня</a></li>
-          <li><a href="">#спальня</a></li>
-          <li><a href="">#дім</a></li>
-          <li><a href="">#квартира</a></li>
-          <li><a href="">#альтанка</a></li>
-          <li><a href="">#design</a></li>
-          <li><a href="">#seao</a></li>
-          <li><a href="">#html</a></li>
-          <li><a href="">#js</a></li>
-          <li><a href="">#bottle</a></li>
-          <li><a href="">#screen</a></li>
-          <li><a href="">#device</a></li>
-          <li><a href="">#mock up</a></li>
-        </ul>
-      </div>
-      <div class="search hidden">
-        <form action="">
-          <input type="text" placeholder="Введіть слово">
-          <input type="submit" value="Пошук">
-        </form>        
-      </div>
-      <div class="registration hidden">
-        <form action="">
-          <input type="text" placeholder="Введіть Ім'я">
-          <input type="text" placeholder="Введіть пошту">
-          <input type="password" placeholder="Введіть пароль">
-          <input type="submit" value="Підтвердити">
-        </form> 
-      </div>
-    </nav>
-    <div class="back-button"></div>
-  </div>
-  <div class="wrapper">
-    <div class="content">
+    <aside>
+      
+    </aside>
+    <main>
       <article>
         <header>
           <time>05/09/2014</time>
-          <h2><a href="">Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's</a></h2>
-          <img class="img-preview" src="./img/article-img.png" alt="">
+          <h1>
+            Lorem Ipsum is simply dummy text 
+            of the printing and typesetting
+          </h1>
+          <div class="tags">
+            <a href="">#webdesign</a><a href="">#design</a>
+          </div>
         </header>
-        <div class="article-content">
-          <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування.Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування.</p>
+        <div class="content">
+          <img src="./img/img1.png" alt="">
+          <p>
+             Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожимна оповідний. Багато програм верстування.Вже давно відомо, що читабельний зміст буде заважати
+          </p>
+          <p>
+             Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожимна оповідний. Багато програм верстування.Вже давно відомо, що читабельний зміст буде заважати
+          </p>
         </div>
         <footer>
-          <div class="article-info">
-            <a href="" class="comment">3</a>
-            <div class="likes">
-              <a href="" class="like"></a>
-              <span>20</span>
-              <a href="" class="unlike"></a>
-            </div>  
+          <a href="" class="btn">Читати далі</a>
+          <div class="info">
+            <a href="" class="comments" title="Коментарі">3</a>
+            <div class="votes">
+              <span class="like" title="Подобається"></span>
+              20
+              <span class="dislike" title="Не подобається"></span>
+            </div>
           </div>
-          <ul class="article-tags">
-            <li><a href="">#webdesign</a></li>
-            <li><a href="">#design</a></li>
-          </ul>
         </footer>
       </article>
       <article>
-        <header class="article-header">
+        <header>
           <time>05/09/2014</time>
-          <h2><a href="">Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's</a></h2>
+          <h1>
+            Lorem Ipsum is simply dummy text 
+            of the printing and typesetting
+          </h1>
+          <div class="tags">
+            <a href="">#webdesign</a><a href="">#design</a>
+          </div>
         </header>
-        <div class="article-content">
-          <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування.Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожим на оповідний. Багато програм верстування.</p>
+        <div class="content">
+          <p>
+             Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожимна оповідний. Багато програм верстування.Вже давно відомо, що читабельний зміст буде заважати
+          </p>
+          <p>
+             Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, "Тут іде текст. Тут іде текст." Це робить текст схожимна оповідний. Багато програм верстування.Вже давно відомо, що читабельний зміст буде заважати
+          </p>
         </div>
         <footer>
-          <div class="article-info">
-            <a href="" class="comment">3</a>
-            <div class="likes">
-              <a href="" class="like"></a>
-              <span>20</span>
-              <a href="" class="unlike"></a>
-            </div>  
+          <a href="" class="btn">Читати далі</a>
+          <div class="info">
+            <a href="" class="comments" title="Коментарі">3</a>
+            <div class="votes">
+              <span class="like" title="Подобається"></span>
+              20
+              <span class="dislike" title="Не подобається"></span>
+            </div>
           </div>
-          <ul class="article-tags">
-            <li><a href="">#webdesign</a></li>
-            <li><a href="">#design</a></li>
-          </ul>
         </footer>
       </article>
       <article>
-        <header class="article-header">
+        <header>
           <time>05/09/2014</time>
-          <h2><a href="">Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's</a></h2>
-          <img class="img-preview" src="./img/article-img.png" alt="">
+          <h1>
+            Lorem Ipsum is simply dummy text 
+            of the printing and typesetting
+          </h1>
+          <div class="tags">
+            <a href="">#webdesign</a><a href="">#design</a>
+          </div>
         </header>
-        <div class="article-content">
+        <div class="content">
+          <img src="./img/img1.png" alt="">
         </div>
         <footer>
-          <div class="article-info">
-            <a href="" class="comment">3</a>
-            <div class="likes">
-              <a href="" class="like"></a>
-              <span>20</span>
-              <a href="" class="unlike"></a>
-            </div>  
+          <a href="" class="btn">Читати далі</a>
+          <div class="info">
+            <a href="" class="comments" title="Коментарі">3</a>
+            <div class="votes">
+              <span class="like" title="Подобається"></span>
+              20
+              <span class="dislike" title="Не подобається"></span>
+            </div>
           </div>
-          <ul class="article-tags">
-            <li><a href="">#webdesign</a></li>
-            <li><a href="">#design</a></li>
-          </ul>
         </footer>
       </article>
+
       <div class="pagination">
-        <ul>
-         <li><a href="">1</a></li>
-         <li><a href="" class="prev"></a></li>
-         <li><a href="" class="active">14</a></li>
-         <li><a href="">15</a></li>
-         <li><a href="">16</a></li>
-         <li><a href="" class="next"></a></li>
-         <li><a href="">300</a></li>
-        </ul>
+        <a href="">1</a>
+        <a href="">&lt;</a>
+        <a href="">14</a>
+        <a href="">15</a>
+        <a href="">16</a>
+        <a href="">&gt;</a>
+        <a href="">300</a>
       </div>
-    </div>
-    <aside>
-    	<div class="top-article">
-    		<div class="title">Найпопулярніші статті</div>
-	      <article>
-	        <header>
-	          <time>01/09/2014</time>
-	          <h2><a href="">On websites that have a lot of pages, breadcrumb navigation can greatly enhance the way</a></h2>
-	        </header>
-	      </article>
-	      <article>
-	        <header>
-	          <time>01/09/2014</time>
-	          <h2><a href="">In terms of usability, breadcrumbs reduce the number of actions a website visitor</a></h2>
-	        </header>
-	      </article>
-	      <article>
-	        <header>
-	          <time>01/09/2014</time>
-	          <h2><a href="">They are also an effective visual aid that indicates the location</a></h2>
-	        </header>
-	      </article>
-	      <article>
-	        <header>
-	          <time>01/09/2014</time>
-	          <h2><a href="">Making it a great source of contextual information for landing pages.</a></h2>
-	        </header>
-	      </article>
-    	</div>
-      <div class="advertising">
-        <a href=""><img src="./img/advertising.png" alt=""></a>
-        <a href=""><img src="./img/advertising.png" alt=""></a>
-        <a href=""><img src="./img/advertising.png" alt=""></a>
-        <a href=""><img src="./img/advertising.png" alt=""></a>
-      </div>
-      <div class="worth-article">
-      	<div class="title">Варто почитати</div>
-				<article class="cf">
-					<img src="./img/mini-img.png" alt="">
-	        <header>
-	          <time>01/09/2014</time>
-	          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
-	          <a href="" class="read-btn">читати</a>
-	        </header>
-	      </article>
-	      <article class="cf">
-					<img src="./img/mini-img.png" alt="">
-	        <header>
-	          <time>01/09/2014</time>
-	          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
-	          <a href="" class="read-btn">читати</a>
-	        </header>
-	      </article>
-	      <article class="cf">
-					<img src="./img/mini-img.png" alt="">
-	        <header>
-	          <time>01/09/2014</time>
-	          <h3><a href="">Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя</a></h3>
-	          <a href="" class="read-btn">читати</a>
-	        </header>
-	      </article>
-      </div>
-    </aside>
+    </main>
   </div>
+    
 </body>
 </html>

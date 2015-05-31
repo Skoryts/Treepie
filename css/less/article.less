@@ -1,8 +1,63 @@
 article{
-	header{
-		time{}
-		
-	}
-	.article-content{}
-	footer{}
+  border-bottom: 1px solid #bababa;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  header{
+    margin-bottom: 39px;
+    time{
+      font-family: 'Roboto-Light';
+      color: #ababab;
+    }
+    h1{
+      margin: 9px 0 0 0;
+      font: 28px/38px 'Roboto-Medium';
+      color: #4e4e4e;
+    }
+    .tags{
+      a{
+        font-family: 'Roboto-Light';
+        color: #ababab;
+        margin-right: 15px; 
+      }
+    }
+  }
+  .content{
+    img{
+      height: 100%;
+      margin-bottom: 22px;
+    }
+    p{
+      margin-bottom: 22px;
+    }
+  }
+  footer{
+    .info{
+      border: 1px solid #adadad;
+      width: 110px;
+      margin-top: 30px;
+      padding: 0 10px;
+      .comments{
+        padding-left: 25px;
+        display: inline-block;
+        background: url("../img/icons.png") 0 -188px no-repeat;
+        text-decoration: none;
+        color: #ababab;
+        margin-right: 20px;
+      }
+      .votes{
+        color: #ababab;
+        display: inline-block;
+        span{
+          display: inline-block;
+          width: 15px;
+          height: 20px;
+          cursor: pointer;
+          background: url("../img/icons.png") 0 -234px no-repeat;
+          &.dislike{
+            background-position: 0 -260px;
+          }
+        }
+      }
+    }
+  }
 }
