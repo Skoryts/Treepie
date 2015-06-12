@@ -8,10 +8,19 @@ article{
       font-family: 'Roboto-Light';
       color: #ababab;
     }
-    h1{
+    h1,
+    h2 a,
+    h3 a{
       margin: 9px 0 0 0;
       font: 28px/38px 'Roboto-Medium';
       color: #4e4e4e;
+      text-decoration: none;
+    }
+    h2 a,
+    h3 a{
+      &:hover{
+        text-decoration: underline;
+      }
     }
     .tags{
       a{
@@ -58,6 +67,20 @@ article{
           }
         }
       }
+    }
+  }
+  &.popular{
+    padding-bottom: 23px;
+    margin-bottom: 23px;
+    header{
+      margin-bottom: 0;
+      h3 a{
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    &:last-child{
+      border-bottom: none;
     }
   }
 }
