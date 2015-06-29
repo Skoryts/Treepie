@@ -90,5 +90,44 @@ article{
         font: 32px/42px 'Roboto-Lights';
       }
     }
+    footer{
+      .shared{
+        div{
+          font: 18px/30px 'Roboto-Lights';
+          color: #999;
+          margin-bottom: 20px;
+        }
+        .social{
+          float: left;
+          li{
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: url("../img/icons.png") 14px -399px no-repeat;
+            border: 1px solid #c0c0c0;
+            vertical-align: middle;
+            margin-right: 10px;
+            cursor: pointer;
+            &:nth-child(2){
+              background-position: 14px -327px;
+            }
+            &:nth-child(3){
+              background-position: 14px -362px;
+            }
+          }
+        }
+        .favourite{
+          float: right;
+          height: 45px;
+          border: 1px solid #c0c0c0;
+          vertical-align: middle;
+          cursor: pointer;
+          background: transparent;
+          padding: 0 25px;
+          font: 14px/30px 'Roboto-Regular';
+          color: #ababab;
+        }
+      }
+    }
   }
 }
