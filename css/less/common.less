@@ -3,10 +3,21 @@
 @import "basic.less";
 @import "article.less";
 
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #000;
+  opacity: 0.5;
+}
 .panel{
   width: 46px;
   min-height: 100%;
   position: fixed;
+  z-index: 100;
   border-left: 2px solid #2495bc;
   padding-top: 95px;
   background: -moz-linear-gradient(top,  #2a2c2e 0%, #1a1b1e 100%); /* FF3.6+ */
@@ -23,7 +34,7 @@
     margin-bottom: 60px;
   }
 
-  nav{
+  .panel-menu{
     div{
       width: 46px;
       height: 48px;
@@ -40,6 +51,35 @@
       }
       &:nth-child(4){
         background-position: 14px -124px;
+      }
+    }
+  }
+
+  // @media (min-width: 1280px) {
+  //   width: 222px;
+  // }
+
+  .popup-menu{
+    width: 224px;
+    position: absolute;
+    left: 46px;
+    top: 0px;
+    background: #fff;
+    min-height: 100%;
+    nav{
+      a{
+        display: block;
+        width: 100%;
+        height: 63px;
+        border-bottom: 1px solid #dfdfdf;
+        text-align: center;
+        font: 14px/63px 'robotoregular';
+        color: #000;
+        text-decoration: none;
+        &:hover{
+          background-color: #2495bc;
+          color: #fff;
+        }
       }
     }
   }
