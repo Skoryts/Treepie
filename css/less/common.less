@@ -12,6 +12,7 @@
   z-index: 99;
   background: #000;
   opacity: 0.5;
+  display: none;
 }
 .panel{
   width: 46px;
@@ -40,7 +41,8 @@
       height: 48px;
       background: url("../img/icons.png") 14px 19px no-repeat;
       cursor: pointer;
-      &:hover{
+      &:hover,
+      &.active{
         background-color: #2495bc;
       }
       &:nth-child(2){
@@ -66,6 +68,7 @@
     top: 0px;
     background: #fff;
     min-height: 100%;
+    display: none;
     nav{
       a{
         display: block;
@@ -76,9 +79,28 @@
         font: 14px/63px 'robotoregular';
         color: #000;
         text-decoration: none;
+        cursor: pointer;
         &:hover{
           background-color: #2495bc;
           color: #fff;
+        }
+      }
+      .sub-menu{
+        display: none;
+      }
+    }
+    > div{
+      display: none;
+    }
+    .tags-tab,
+    .search-tab,
+    .login-tab{
+      padding: 21px;
+      a{
+        font-family: "robotolight";
+        color: #ababab;
+        &:hover{
+          color: #2495bc;
         }
       }
     }
@@ -211,4 +233,11 @@ aside{
     color: #ababab;
     resize: vertical;
   }
+}
+input{
+  height: 38px;
+  border: 1px solid #3c3d3f;
+  padding: 0px 15px;
+  font: 14px/38px 'robotolight';
+  margin-bottom: 20px;
 }
