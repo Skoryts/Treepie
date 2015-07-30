@@ -10,7 +10,14 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".main-nav").on("click", "a", function () {
-		
+	$(".main-nav").on("click", "a", function (e) {
+		if ($(this).attr("href") === "" && $(this).hasClass("has-sub-menu")) {
+			e.preventDefault();
+			$(".main-nav").hide();
+			$(".sub-menu").eq($(this).index()).show().on("click", ".back-to-main", function () {
+				$(".sub-menu").hide();
+				$(".main-nav").show();
+			});
+		}
 	})
 })
