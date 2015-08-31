@@ -1,6 +1,10 @@
 <?php
 
+/** @var \app\components\View $this */
+/** @var \app\models\Article $article */
+
 use app\components\helpers\Category;
+use yii\helpers\Html;
 
 $this->pageTitle = $article->title;
 $this->setTitle(array_merge([$article->title], Category::getTitle($article->category)));
@@ -9,24 +13,47 @@ $this->setBreadcrumbsItem($this->pageTitle);
 
 ?>
 
-<article class="article">
-	<div class="article-path">
-		<?= $this->render('/common/_breadcrumbs') ?>
-	</div>
-	<header class="article-header">
+
+<?= $this->render('/common/_breadcrumbs') ?>
+<article class="single">
+	<header>
 		<time><?= (new DateTime($article->createdAt))->format('d/m/Y') ?></time>
-		<h1><?= $article->title ?></h1>
+		<h1>
+			<?= $article->title ?>
+		</h1>
+		<?php if (!empty($article->tagsList)): ?>
+			<div class="tags">
+				<?php foreach ($article->tagsList as $tag): ?>
+					<?= Html::a('#' . $tag, ['article/tag', 'tag' => $tag]) ?>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
 	</header>
-	<div class="article-content">
+	<div class="content">
 		<?= $article->body ?>
 	</div>
-	<div class="article-footer">
-		<div class="social-webs">
-			<span><?= Yii::t('app', 'Share with friends') ?></span>
-			<a href="" class="facebook"></a>
-			<a href="" class="vk"></a>
-			<a href="" class="twitter"></a>
-		</div>
-		<span class="add-to-bookmark"><?= Yii::t('app', 'Add to bookmarks') ?></span>
-	</div>
+	<?php if (false): ?>
+		<footer>
+			<div class="info m-b-40">
+				<a href="" class="comments" title="Коментарі">3</a>
+
+				<div class="votes">
+					<span class="like" title="Подобається"></span>
+					20
+					<span class="dislike" title="Не подобається"></span>
+				</div>
+			</div>
+			<div class="shared">
+				<div>Поділитися з друзями</div>
+				<div class="flex">
+					<ul class="social">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<button class="favourite">Добавити у вибране</button>
+				</div>
+			</div>
+		</footer>
+	<?php endif; ?>
 </article>

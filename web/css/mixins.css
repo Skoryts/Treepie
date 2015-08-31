@@ -1,20 +1,15 @@
-.cf{
-  &:before,
-  &:after{
-    content: " ";
-    display: table;
-  }
-  &:after{
-    clear: both;
-  }
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
 }
-.ma{
+.cf:after {
+  clear: both;
+}
+.ma {
   margin: 0 auto;
 }
-.hidden{
-  
-}
-.btn{
+.btn {
   display: inline-block;
   padding: 10px 20px;
   background: #000;
@@ -22,15 +17,13 @@
   color: #fff;
   cursor: pointer;
   border: none;
-  &:hover{
-    background-color: #2495bc;
-  }
 }
-
-.m-b-40{
+.btn:hover {
+  background-color: #2495bc;
+}
+.m-b-40 {
   margin-bottom: 40px !important;
 }
-
-.flex{
+.flex {
   display: flex !important;
 }

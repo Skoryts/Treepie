@@ -1,0 +1,126 @@
+article {
+  border-bottom: 1px solid #bababa;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+article header {
+  margin-bottom: 39px;
+}
+article header time {
+  font-family: 'robotolight';
+  color: #ababab;
+}
+article header h1,
+article header h2 a,
+article header h3 a {
+  margin: 9px 0 0 0;
+  font: 28px/38px 'robotomedium';
+  color: #4e4e4e;
+  text-decoration: none;
+}
+article header h2 a:hover,
+article header h3 a:hover {
+  text-decoration: underline;
+}
+article header .tags a {
+  font-family: 'robotolight';
+  color: #ababab;
+  margin-right: 15px;
+}
+article .content {
+  color: #666;
+}
+article .content img {
+  height: 100%;
+  margin-bottom: 22px;
+}
+article .content p {
+  margin-bottom: 22px;
+}
+article footer .info {
+  border: 1px solid #adadad;
+  width: 110px;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+article footer .info .comments {
+  padding-left: 25px;
+  display: inline-block;
+  background: url("../img/icons.png") 0 -188px no-repeat;
+  text-decoration: none;
+  color: #ababab;
+  margin-right: 20px;
+}
+article footer .info .votes {
+  color: #ababab;
+  display: inline-block;
+}
+article footer .info .votes span {
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  cursor: pointer;
+  background: url("../img/icons.png") 0 -234px no-repeat;
+}
+article footer .info .votes span.dislike {
+  background-position: 0 -260px;
+}
+article.popular {
+  padding-bottom: 23px;
+  margin-bottom: 23px;
+}
+article.popular header {
+  margin-bottom: 0;
+}
+article.popular header h3 a {
+  font-size: 16px;
+  line-height: 22px;
+}
+article.popular:last-child {
+  border-bottom: none;
+}
+article.single {
+  margin-top: 50px;
+}
+article.single header h1 {
+  font: 32px/42px 'robotolight';
+}
+article.single .content {
+  font-size: 16px;
+  line-height: 23px;
+}
+article.single footer .shared div {
+  font: 18px/30px 'robotolight';
+  color: #999;
+  margin-bottom: 20px;
+}
+article.single footer .shared .social {
+  flex: 2;
+}
+article.single footer .shared .social li {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url("../img/icons.png") 14px -399px no-repeat;
+  border: 1px solid #c0c0c0;
+  vertical-align: middle;
+  margin-right: 10px;
+  cursor: pointer;
+}
+article.single footer .shared .social li:nth-child(2) {
+  background-position: 14px -327px;
+}
+article.single footer .shared .social li:nth-child(3) {
+  background-position: 14px -362px;
+}
+article.single footer .shared .favourite {
+  flex: 1;
+  height: 45px;
+  border: 1px solid #c0c0c0;
+  vertical-align: middle;
+  cursor: pointer;
+  background: transparent;
+  padding: 0 25px;
+  font: 14px/30px 'robotoregular';
+  color: #ababab;
+}

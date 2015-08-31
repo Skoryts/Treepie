@@ -2,10 +2,10 @@ $("#search-form").submit(function () {
     $.ajax({
         url: $(this).prop('action'),
         data: $(this).serialize(),
-        success: function (data) {
-            $('.content').html(data);
-            //todo: animate not working in Chromium (Version 40.0.2214.111 Ubuntu 14.04 (64-bit)) ?!! [@tooleks]
+        success: function (data) {alert(data);
+            $('main').html(data);
             $('html').animate({ scrollTop: 0 }, 'fast');
+            //todo: add action to close the sidebar  [@tooleks]
         }
     });
 

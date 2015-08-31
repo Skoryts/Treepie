@@ -3,7 +3,6 @@
 namespace app\controllers;
 
 use app\models\Category;
-use app\models\Comment;
 use Yii;
 use app\models\Article;
 use app\models\search\ArticleSearch;

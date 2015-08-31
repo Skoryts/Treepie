@@ -1,72 +1,33 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 }
 html, body{
   height: 100%;
   background: #fff;
 }
-body, a{
-  font: 16px/23px Roboto-Regular;
-  text-decoration: none;
+body{
+  font: 14px/23px 'robotoregular';
+  .layout{
+    min-width: 960px;
+    max-width: 1400px;
+    min-height: 100%;
+    aside{
+      float: right;
+      width: 344px;
+      padding-top: 95px;
+    }
+    main{
+      margin: 0 344px 0 46px;
+      padding: 95px 48px 50px 32px;
+      // @media (min-width: 1280px) {
+      //   margin-left: 222px;
+      // }
+    }
+  }
+    
 }
-ul li{
-	list-style-type: none;
-}
-
-time{
-	display: inline-block;
-	font: 14px Roboto-Light;
-	color: #ababab;
-	margin-bottom: 26px;
-}
-
-h1{
-	font: 32px Roboto-Light;
-	color: #444;
-	margin-bottom: 25px;
-}
-
-h2 a{
-	font: 26px Roboto-Medium;
-	color: #4e4e4e;
-}
-
-h3 a{
-	font: 22px Roboto-Medium;
-	color: #444;
-}
-
-input{
-	height: 38px;
-	width: 192px;
-	border: 1px solid #3c3d3f;
-	background: #232427;
-	font: 14px Roboto-Light;
-	color: #ababab;
-	padding: 0 15px;
-	margin-bottom: 15px;
-	&[type="password"]{
-		margin-bottom: 33px;
-	}
-	&[type="submit"]{
-		height: 38px;
-		width: 118px;
-		padding: 0;
-		border: 1px solid #c0c0c0;
-		color: #ffffff;
-		font: 14px Roboto-Regular;
-		margin-bottom: 31px;
-		cursor: pointer;
-		&.blue{
-			border: none;
-			height: 40px;
-			width: 120px;
-			background: #2495bc;
-			margin-bottom: 191px;
-		}
-		&:hover{
-			background: #3A3A3A;
-		}
-	}
+ul{
+  list-style: none;
 }

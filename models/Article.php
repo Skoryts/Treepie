@@ -22,6 +22,8 @@ use yii\db\ActiveRecord;
  * @property string $tags
  * @property string $createdAt
  * @property string $updatedAt
+ *
+ * @property File[] $files
  */
 class Article extends ActiveRecord
 {

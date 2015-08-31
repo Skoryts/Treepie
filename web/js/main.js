@@ -1,56 +1,23 @@
+$(document).ready(function () {
+	$(".panel-menu").on("click", "div", function () {
+		$(this).toggleClass("active").siblings("div").removeClass("active")
+		if ($(this).hasClass("active")) {
+			$(".popup-menu, .overlay").show();
+			$(".popup-menu > div").hide();
+			$(".popup-menu > div").eq($(this).index()).show();
+		} else{
+			$(".popup-menu, .overlay").hide();
+		}
+	});
 
-
-$(document).ready(function(){
-	/*----------------icon-menu-----------------------------*/		
-	  $(".icon-menu li").click(function(){
-	  	var listIndex = $(this).index();
-	  	var masMenu = $(".icon-menu").siblings();
-
-	  	/*----------close-open----------------*/	
-	  	if (masMenu[listIndex].classList.contains("hidden") == false){
-	  		masMenu.addClass("hidden");
-	  		$(".icon-menu li").removeClass("active");
-	  		return false;
-	  	}
-	  	if ($(".sidebar").css("height") == "96px") {	  		
-		  	$(".navigation li div").css("right", "auto");
-				$(".toggle-menu").hide().css("right", "-288px");
-	  	} else {
-	  		$(".navigation li div").css("left", "auto");
-				$(".toggle-menu").hide().css("left", "288px");
-	  	}
-	  	masMenu.addClass("hidden");
-	  	masMenu[listIndex].classList.remove("hidden");
-	  	$(".icon-menu li").removeClass("active");
-	  	$(this).addClass("active");
-	  	
-	  });
-
-
-	
-	if ($(".sidebar").css("height") == "96px") {
-		var menuActive = "";
-		/*-----------------------Toggle-slim-menu----------------------*/
-	  $(".navigation li div").click(function(){
-	  	if ($(this).next().text() != ""){
-	  		$(".navigation li div").animate({right: "+=288px"}, 300);
-	  		$(this).next().show().animate({right: "+=288px"}, 300);
-	  	}
-	  });
-	} else {
-		/*-----------------------Toggle-menu----------------------*/
-	  $(".navigation li div").click(function(){
-	  	if ($(this).next().text() != ""){
-	  		$(".navigation li div").animate({left: "-=288px"}, 300);
-	  		$(this).next().show().animate({left: "-=288px"}, 300);
-	  	}
-	  });
-	}
-
-});
-
-
-	
-	  
-
-
+	$(".main-nav").on("click", "a", function (e) {
+		if ($(this).attr("href") === "" && $(this).hasClass("has-sub-menu")) {
+			e.preventDefault();
+			$(".main-nav").hide();
+			$(".sub-menu").eq($(this).index()).show().on("click", ".back-to-main", function () {
+				$(".sub-menu").hide();
+				$(".main-nav").show();
+			});
+		}
+	})
+})

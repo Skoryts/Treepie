@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+html,
+body {
+  height: 100%;
+  background: #fff;
+}
+body {
+  font: 14px/23px 'robotoregular';
+}
+body .layout {
+  min-width: 960px;
+  max-width: 1400px;
+  min-height: 100%;
+}
+body .layout aside {
+  float: right;
+  width: 344px;
+  padding-top: 95px;
+}
+body .layout main {
+  margin: 0 344px 0 46px;
+  padding: 95px 48px 50px 32px;
+}
+ul {
+  list-style: none;
+}

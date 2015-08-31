@@ -1,0 +1,138 @@
+article{
+  border-bottom: 1px solid #bababa;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  header{
+    margin-bottom: 39px;
+    time{
+      font-family: 'robotolight';
+      color: #ababab;
+    }
+    h1,
+    h2 a,
+    h3 a{
+      margin: 9px 0 0 0;
+      font: 28px/38px 'robotomedium';
+      color: #4e4e4e;
+      text-decoration: none;
+    }
+    h2 a,
+    h3 a{
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .tags{
+      a{
+        font-family: 'robotolight';
+        color: #ababab;
+        margin-right: 15px; 
+      }
+    }
+  }
+  .content{
+    color: #666;
+    img{
+      height: 100%;
+      margin-bottom: 22px;
+    }
+    p{
+      margin-bottom: 22px;
+    }
+  }
+  footer{
+    .info{
+      border: 1px solid #adadad;
+      width: 110px;
+      margin-top: 30px;
+      padding: 0 10px;
+      .comments{
+        padding-left: 25px;
+        display: inline-block;
+        background: url("../img/icons.png") 0 -188px no-repeat;
+        text-decoration: none;
+        color: #ababab;
+        margin-right: 20px;
+      }
+      .votes{
+        color: #ababab;
+        display: inline-block;
+        span{
+          display: inline-block;
+          width: 15px;
+          height: 20px;
+          cursor: pointer;
+          background: url("../img/icons.png") 0 -234px no-repeat;
+          &.dislike{
+            background-position: 0 -260px;
+          }
+        }
+      }
+    }
+  }
+  &.popular{
+    padding-bottom: 23px;
+    margin-bottom: 23px;
+    header{
+      margin-bottom: 0;
+      h3 a{
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  &.single{
+    margin-top: 50px;
+    header{
+      h1{
+        font: 32px/42px 'robotolight';
+      }
+    }
+    .content{
+      font-size: 16px;
+      line-height: 23px;
+    }
+    footer{
+      .shared{
+        div{
+          font: 18px/30px 'robotolight';
+          color: #999;
+          margin-bottom: 20px;
+        }
+        .social{
+          flex: 2;
+          li{
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: url("../img/icons.png") 14px -399px no-repeat;
+            border: 1px solid #c0c0c0;
+            vertical-align: middle;
+            margin-right: 10px;
+            cursor: pointer;
+            &:nth-child(2){
+              background-position: 14px -327px;
+            }
+            &:nth-child(3){
+              background-position: 14px -362px;
+            }
+          }
+        }
+        .favourite{
+          flex: 1;
+          height: 45px;
+          border: 1px solid #c0c0c0;
+          vertical-align: middle;
+          cursor: pointer;
+          background: transparent;
+          padding: 0 25px;
+          font: 14px/30px 'robotoregular';
+          color: #ababab;
+        }
+      }
+    }
+  }
+}
